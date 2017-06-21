@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import {ValueAccessorBase} from "./value-acessor-base";
+import {ValueAccessorBase} from "../core/value-acessor-base";
 
 /* tslint:disable */
 
