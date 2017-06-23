@@ -1,1 +1,1 @@
-export * from './src/brazilian-inputs.module';
+export * from './src/ngx-br.module';

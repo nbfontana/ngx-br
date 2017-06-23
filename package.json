@@ -1,7 +1,7 @@
 {
-  "name": "ngx-brazilian-inputs",
-  "description": "Brazilian input field components for Angular 4 and beyond!",
+  "name": "ngx-br",
   "scripts": {
+    "demo": "webpack-dev-server --config config/webpack.demo.js --open --progress --profile --watch --content-base demo/",
     "clean": "rimraf bundles coverage src/**/*.d.ts src/**/*.metadata.json src/**/*.js tests/**/*.d.ts tests/**/*.metadata.json tests/**/*.js index.d.ts index.metadata.json index.js",
     "test": "karma start",
     "test-watch": "karma start --singleRun=false --autoWatch=true",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nbfontana/ngx-brazilian-inputs.git"
+    "url": "git+https://github.com/nbfontana/ngx-br.git"
   },
   "keywords": [
     "angular",
@@ -23,12 +23,12 @@
   "author": "Neri Bez Fontana",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nbfontana/ngx-brazilian-inputs/issues"
+    "url": "https://github.com/nbfontana/ngx-br/issues"
   },
   "main": "bundles/core.umd.js",
   "module": "index.js",
   "typings": "index.d.ts",
-  "homepage": "https://github.com/nbfontana/ngx-brazilian-inputs",
+  "homepage": "https://github.com/nbfontana/ngx-br",
   "peerDependencies": {
     "@angular/core": ">=2.0.0"
   },
@@ -49,12 +49,14 @@
     "@types/hammerjs": "2.0.34",
     "@types/jasmine": "2.5.47",
     "@types/node": "7.0.22",
-    "awesome-typescript-loader": "3.1.3",
+    "angular2-template-loader": "^0.6.2",
+    "awesome-typescript-loader": "^3.1.3",
     "clean-webpack-plugin": "0.1.16",
     "codelyzer": "3.0.1",
     "commitizen": "2.9.6",
     "core-js": "2.4.1",
     "cz-conventional-changelog": "2.0.0",
+    "extract-text-webpack-plugin": "^2.1.2",
     "istanbul-instrumenter-loader": "2.0.0",
     "jasmine-core": "2.6.2",
     "karma": "1.7.0",
@@ -76,11 +78,17 @@
     "tslint-loader": "3.5.3",
     "typescript": "2.3.3",
     "webpack": "2.6.0",
+    "webpack-dev-server": "^2.5.0",
     "zone.js": "0.8.11"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "description": "",
+  "version": "1.0.0",
+  "directories": {
+    "test": "tests"
   }
 }
