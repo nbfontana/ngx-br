@@ -4,33 +4,26 @@
   ],
   "rules": {
     "class-name": true,
-    "curly": true,
-    "forin": true,
-    "indent": [
+    "curly": false,
+    "eofline": false,
+    "indent": "spaces",
+    "max-line-length": [
       true,
-      "spaces"
+      140
     ],
-    "label-position": true,
-    "member-access": false,
+    "member-ordering": [
+      true,
+      "public-before-private",
+      "static-before-instance",
+      "variables-before-functions"
+    ],
     "no-arg": true,
-    "no-bitwise": true,
-    "no-console": [
-      true,
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
-    ],
     "no-construct": true,
     "no-duplicate-variable": true,
-    "no-empty": false,
+    "no-empty": true,
     "no-eval": true,
-    "no-inferrable-types": false,
-    "no-shadowed-variable": true,
-    "no-string-literal": false,
+    "no-trailing-whitespace": true,
     "no-unused-expression": true,
-    "object-literal-sort-keys": false,
     "one-line": [
       true,
       "check-open-brace",
@@ -38,28 +31,63 @@
       "check-else",
       "check-whitespace"
     ],
-    "radix": true,
-    "semicolon": [
-      "always"
+    "quotemark": [
+      true,
+      "single"
     ],
+    "semicolon": true,
     "triple-equals": [
       true,
       "allow-null-check"
     ],
-    "typedef-whitespace": [
-      true,
-      {
-        "call-signature": "nospace",
-        "index-signature": "nospace",
-        "parameter": "nospace",
-        "property-declaration": "nospace",
-        "variable-declaration": "nospace"
-      }
-    ],
     "variable-name": false,
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ],
+    "typedef": [
+      true,
+      "call-signature",
+      "parameter",
+      "property-declaration",
+      "variable-declaration",
+      "member-variable-declaration"
+    ],
+    "directive-selector": [
+      true,
+      "attribute",
+      "br",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "br",
+      "kebab-case"
+    ],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": false,
-    "use-pipe-transform-interface": true
+    "no-attribute-parameter-decorator": true,
+    "no-input-rename": true,
+    "no-output-rename": true,
+    "no-forward-ref": true,
+    "use-life-cycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "pipe-naming": [
+      true,
+      "camelCase",
+      "br"
+    ],
+    "component-class-suffix": true,
+    "directive-class-suffix": true,
+    "import-destructuring-spacing": true,
+    "templates-use-public": true,
+    "no-access-missing-member": false,
+    "invoke-injectable": true
   }
 }

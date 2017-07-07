@@ -1,0 +1,13 @@
+{
+  "generator-angular-library": {
+    "githubUsername": "nbfontana",
+    "githubRepoName": "ngx-br",
+    "npmModuleName": "ngx-br",
+    "moduleGlobal": "ngxBr",
+    "ngModuleName": "NgxBrModule",
+    "selectorPrefix": "br",
+    "projectTitle": "ngx br",
+    "projectDescription": "",
+    "authorName": "Neri Bez Fontana"
+  }
+}

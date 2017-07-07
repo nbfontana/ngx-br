@@ -9,11 +9,12 @@ let cpfPattern = new StringMask('000.000.000-00');
 @Component({
   selector: 'ngx-cpf',
   template: `
-    <input class="form-control" type="text" maxlength="14"
+    <input class="form-control"
+           type="text"
+           maxlength="14"
            [ngModel]="formatter(value)"
            (ngModelChange)="parser($event)"
-           (blur)="blurEvt($event)">
-  `,
+           (blur)="blurEvt($event)">`,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: CpfComponent,
