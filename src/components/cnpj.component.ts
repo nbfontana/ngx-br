@@ -1,15 +1,15 @@
-import {Component, EventEmitter, HostListener, Output, Input} from "@angular/core";
+import {Component, EventEmitter, forwardRef, HostListener, Output, Input} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../core/value-acessor-base";
 
 /* tslint:disable */
 let StringMask = require('string-mask');
-let cpfPattern = new StringMask('000.000.000-00');
+let cnpjPattern = new StringMask('00.000.000/0000-00');
 
 @Component({
-  selector: 'ngx-cpf',
+  selector: 'ngx-cnpj',
   template: `
-    <input class="form-control" type="text" maxlength="14"
+    <input class="form-control" type="text" maxlength="18"
            placeholder="{{placeholder}}"
            (keydown)="onkeydown($event)"
            [ngModel]="formatter(value)"
@@ -17,40 +17,46 @@ let cpfPattern = new StringMask('000.000.000-00');
            (blur)="blurEvt($event)">`,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
-    useExisting: CpfComponent,
+    useExisting: forwardRef(() => CnpjComponent),
     multi: true
-  }],
+  }]
 })
-export class CpfComponent extends ValueAccessorBase<string> {
+export class CnpjComponent extends ValueAccessorBase<string> {
 
   @Input() placeholder: string;
   @Output() blur: EventEmitter<any> = new EventEmitter();
-
   private previousKeyDown;
 
-  public formatter(value: string) {
-    return (cpfPattern.apply(value) || '').trim().slice(0, 14);
+  public formatter(value) {
+    return (cnpjPattern.apply(value) || '').trim().slice(0, 18);
   }
 
-  public parser(value: string) {
-    this.value = value ? value.replace(/[^\d]/g, '') : value;
-  }
-
-  public blurEvt(value: string): void {
-    this.blur.next(value);
+  public parser(v) {
+    this.value = v ? v.replace(/[^\d]/g, '') : v;
   }
 
   public onkeydown(e): void {
     let previousKeyDownIsCtrlA = this.previousKeyDown && this.previousKeyDown.keyCode === 65 && this.previousKeyDown.ctrlKey;
     let endsWithSpecialCharacter = new RegExp('.+[^0-9]$').test(e.target.value);
+
     if (e.keyCode === 8 && endsWithSpecialCharacter && !previousKeyDownIsCtrlA) {
       this.parser(e.target.value.slice(0, e.target.value.length - 2));
       e.preventDefault();
     }
+
     this.previousKeyDown = e;
   }
 
-  @HostListener('keydown', ['$event']) onKeyDown(event: any) {
+  public blurEvt(value): void {
+    this.blur.next(value);
+  }
+
+  @HostListener('paste', ['$event']) onPaste(event) {
+    console.log(this.value);
+    console.log(event.srcElement.value);
+  }
+
+  @HostListener('keydown', ['$event']) onKeyDown(event) {
     let e = <KeyboardEvent> event;
 
     if ([46, 8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||

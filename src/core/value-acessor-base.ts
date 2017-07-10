@@ -1,8 +1,8 @@
 import {ControlValueAccessor} from "@angular/forms";
 
 export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
-  private innerValue: T;
 
+  private innerValue: T;
   private changed = new Array<(value: T) => void>();
   private touched = new Array<() => void>();
 
@@ -11,10 +11,8 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
   }
 
   set value(value: T) {
-    if (this.innerValue !== value) {
-      this.innerValue = value;
-      this.changed.forEach(f => f(value));
-    }
+    this.innerValue = value;
+    this.changed.forEach(f => f(value));
   }
 
   writeValue(value: T) {
