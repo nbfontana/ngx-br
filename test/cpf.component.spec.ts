@@ -1,7 +1,7 @@
 import {ComponentFixture, TestBed} from "@angular/core/testing";
 import {expect} from "chai";
 import {NgxBrModule} from "../src";
-import {CpfComponent} from "../src/components/cpf.component";
+import {CpfComponent} from "../src/components/cpf/cpf.component";
 
 describe('***** Testes CPF *****', () => {
 

@@ -1,8 +1,7 @@
 import {Component, EventEmitter, HostListener, Output, Input} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import {ValueAccessorBase} from "../core/value-acessor-base";
+import {ValueAccessorBase} from "../../core/value-acessor-base";
 
-/* tslint:disable */
 let StringMask = require('string-mask');
 let cpfPattern = new StringMask('000.000.000-00');
 

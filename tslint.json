@@ -44,7 +44,7 @@
     "import-destructuring-spacing": false,
     "invoke-injectable": true,
     "no-attribute-parameter-decorator": true,
-    "no-forward-ref": true,
+    "no-forward-ref": false,
     "no-input-rename": true,
     "no-output-rename": true,
     "pipe-naming": [
@@ -87,9 +87,7 @@
       "camelCase"
     ],
     "component-selector": [
-      true,
-      "element",
-      "br",
+      false,
       "kebab-case"
     ],
     "use-pipe-transform-interface": true
