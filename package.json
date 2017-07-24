@@ -1,6 +1,6 @@
 {
   "name": "ngx-br",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "./bundles/ngx-br.umd.js",
   "module": "./index.js",
@@ -57,7 +57,7 @@
     "@types/chai": "4.0.0",
     "@types/html-webpack-plugin": "2.11.2",
     "@types/mocha": "2.2.41",
-    "@types/node": "7.0.0",
+    "@types/node": "^7.0.0",
     "@types/sinon": "2.1.2",
     "@types/sinon-chai": "2.7.26",
     "@types/webpack": "2.2.8",
