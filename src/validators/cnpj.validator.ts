@@ -1,8 +1,9 @@
-import {AbstractControl} from "@angular/forms";
+import {AbstractControl, ValidatorFn} from "@angular/forms";
 
-export const CnpjValidator = (allowAllEqualNumbers: boolean) => {
+export function cnpjValidationFn(blockEqualNumberSequence?: boolean): ValidatorFn {
   return (control: AbstractControl) => {
     let value = control.value;
+    blockEqualNumberSequence = blockEqualNumberSequence || true;
 
     if (!value) {
       return null;
@@ -21,7 +22,7 @@ export const CnpjValidator = (allowAllEqualNumbers: boolean) => {
       value === '44444444444444' || value === '55555555555555' || value === '66666666666666' ||
       value === '77777777777777' || value === '88888888888888' || value === '99999999999999';
 
-    if (allNumbersAreEqual && allowAllEqualNumbers) {
+    if (allNumbersAreEqual && blockEqualNumberSequence) {
       return {
         cnpj: true
       };

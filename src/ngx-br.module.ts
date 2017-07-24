@@ -4,9 +4,7 @@ import {CommonModule} from "@angular/common";
 import {FormsModule} from "@angular/forms";
 import {CnpjComponent} from "./components/cnpj/cnpj.component";
 
-export * from "./validators/cnpj.validator";
-export * from "./validators/cpf.validator";
-export * from "./validators/email.validator";
+export * from "./ngx-br-validators";
 
 @NgModule({
   imports: [
