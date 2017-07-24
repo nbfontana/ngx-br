@@ -18,11 +18,11 @@ export class NgxBrValidators {
   /**
    * Validator that requires controls to match a valid CPF number.
    */
-  static cpf: (x?: boolean) => {} = cpfValidationFn;
+  static cpf: (blockEqualNumberSequence?: boolean) => void = cpfValidationFn;
 
   /**
    * Validator that requires controls to match a valid CNPJ number.
    */
-  static cnpj: (x?: boolean) => {} = cnpjValidationFn;
+  static cnpj: (blockEqualNumberSequence?: boolean) => void = cnpjValidationFn;
 
 }
