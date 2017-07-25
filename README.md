@@ -48,7 +48,7 @@ Finally use in one of your apps components:
 import { Component } from '@angular/core';
 
 @Component({
-  template: '<hello-world></hello-world>'
+  template: '<cpf [placeholder]="'Digite seu CPF'"></cpf>'
 })
 export class MyComponent {}
 ```
@@ -64,8 +64,7 @@ You may also find it useful to view the [demo source](https://github.com/nbfonta
 ```
 
 ## Documentation
-All documentation is auto-generated from the source via [compodoc](https://compodoc.github.io/compodoc/) and can be viewed here:
-https://nbfontana.github.io/ngx-br/docs/
+  TODO
 
 ## Development
 
@@ -74,16 +73,10 @@ https://nbfontana.github.io/ngx-br/docs/
 * Install local dev dependencies: `npm install` while current directory is this repo
 
 ### Development server
-Run `npm start` to start a development server on port 8000 with auto reload + tests.
+Run `npm start` or `npm run demo` to start a development server on port 8000 with auto reload + tests.
 
 ### Testing
 Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
-
-### Release
-* Bump the version in package.json (once the module hits 1.0 this will become automatic)
-```bash
-npm run release
-```
 
 ## License
 
