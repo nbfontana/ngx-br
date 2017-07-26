@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.7"></a>
+## [0.0.7](https://github.com/nbfontana/ngx-br/compare/v0.0.6...v0.0.7) (2017-07-26)
+
+
+### Features
+
+* adicionado pipe para cpf ou cnpj ([e7dbe97](https://github.com/nbfontana/ngx-br/commit/e7dbe97))
+
+
+
 <a name="0.0.6"></a>
 ## [0.0.6](https://github.com/nbfontana/ngx-br/compare/v0.0.5...v0.0.6) (2017-07-24)
 
