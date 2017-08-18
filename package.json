@@ -109,6 +109,7 @@
     }
   },
   "dependencies": {
+    "ngx-utilities": "0.0.20",
     "string-mask": "0.3.0"
   }
 }

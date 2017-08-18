@@ -1,6 +1,7 @@
 import {Component, EventEmitter, forwardRef, HostListener, Output, Input} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
+import {KeyboardCodes, KeyboardUtils} from "ngx-utilities";
 
 let StringMask = require('string-mask');
 let cnpjPattern = new StringMask('00.000.000/0000-00');
@@ -50,31 +51,15 @@ export class CnpjComponent extends ValueAccessorBase<string> {
     this.blur.next(value);
   }
 
-  @HostListener('paste', ['$event']) onPaste(event) {
-    console.log(this.value);
-    console.log(event.srcElement.value);
-  }
-
   @HostListener('keydown', ['$event']) onKeyDown(event) {
     let e = <KeyboardEvent> event;
 
     if ([46, 8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
-
-      // Allow: Ctrl+A
-      (e.keyCode === 65 && e.ctrlKey === true) ||
-
-      // Allow: Ctrl+C
-      (e.keyCode === 67 && e.ctrlKey === true) ||
-
-      // Allow: Ctrl+V
-      (event.keyCode === 86 && event.ctrlKey === true) ||
-
-      // Allow: Ctrl+X
-      (e.keyCode === 88 && e.ctrlKey === true) ||
-
-      // Allow: home, end, left, right
-      (e.keyCode >= 35 && e.keyCode <= 39)) {
-
+      KeyboardUtils.isCtrlAPressed(e) ||
+      KeyboardUtils.isCtrlCPressed(e) ||
+      KeyboardUtils.isCtrlVPressed(e) ||
+      KeyboardUtils.isCtrlXPressed(e) ||
+      this.isHomeEndLeftOrRightPressed(e)) {
       // let it happen, don't do anything
       return;
     }
@@ -82,6 +67,10 @@ export class CnpjComponent extends ValueAccessorBase<string> {
     if (this.isNotANumber(e)) {
       e.preventDefault();
     }
+  }
+
+  private isHomeEndLeftOrRightPressed(e) {
+    return e.keyCode >= KeyboardCodes.END && e.keyCode <= KeyboardCodes.ARROW_RIGHT
   }
 
   private isNotANumber(event: KeyboardEvent) {

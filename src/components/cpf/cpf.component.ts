@@ -1,6 +1,7 @@
 import {Component, EventEmitter, HostListener, Output, Input} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
+import {KeyboardUtils} from "ngx-utilities";
 
 let StringMask = require('string-mask');
 let cpfPattern = new StringMask('000.000.000-00');
@@ -54,17 +55,10 @@ export class CpfComponent extends ValueAccessorBase<string> {
 
     if ([46, 8, 9, 27, 13].indexOf(e.keyCode) !== -1 ||
 
-      // Allow: Ctrl+A
-      (e.keyCode === 65 && e.ctrlKey === true) ||
-
-      // Allow: Ctrl+C
-      (e.keyCode === 67 && e.ctrlKey === true) ||
-
-      // Allow: Ctrl+V
-      (event.keyCode === 86 && event.ctrlKey === true) ||
-
-      // Allow: Ctrl+X
-      (e.keyCode === 88 && e.ctrlKey === true) ||
+      KeyboardUtils.isCtrlAPressed(e) ||
+      KeyboardUtils.isCtrlCPressed(e) ||
+      KeyboardUtils.isCtrlVPressed(e) ||
+      KeyboardUtils.isCtrlXPressed(e) ||
 
       // Allow: home, end, left, right
       (e.keyCode >= 35 && e.keyCode <= 39)) {
