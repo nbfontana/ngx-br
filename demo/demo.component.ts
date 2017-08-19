@@ -18,6 +18,12 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
           <span *ngIf="form.get('cnpj').hasError('cnpj')" class="text-danger">CNPJ Inválido</span>
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-4">
+          <telefone formControlName="telefone" [placeholder]="'(48) 9 9999-9999'"></telefone>
+          {{form.get('telefone').value}}
+        </div>
+      </div>
     </form>
   `
 })
@@ -28,7 +34,8 @@ export class DemoComponent {
   constructor(private fb: FormBuilder) {
     this.form = fb.group({
       cpf: [null, NgxBrValidators.cpf()],
-      cnpj: [null, NgxBrValidators.cnpj()]
+      cnpj: [null, NgxBrValidators.cnpj()],
+      telefone: ['']
     });
   }
 
