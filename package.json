@@ -1,6 +1,6 @@
 {
   "name": "ngx-br",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "",
   "main": "./bundles/ngx-br.umd.js",
   "module": "./index.js",
