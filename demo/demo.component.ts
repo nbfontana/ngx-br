@@ -24,6 +24,12 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
           {{form.get('telefone').value}}
         </div>
       </div>
+      <div class="row">
+        <div class="col-md-4">
+          <cep formControlName="cep"></cep>
+          {{form.get('cep').value}}
+        </div>
+      </div>
     </form>
   `
 })
@@ -35,7 +41,8 @@ export class DemoComponent {
     this.form = fb.group({
       cpf: [null, NgxBrValidators.cpf()],
       cnpj: [null, NgxBrValidators.cnpj()],
-      telefone: ['']
+      telefone: [''],
+      cep: ['']
     });
   }
 

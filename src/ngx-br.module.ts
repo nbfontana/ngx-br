@@ -5,6 +5,7 @@ import {FormsModule} from "@angular/forms";
 import {CnpjComponent} from "./components/cnpj/cnpj.component";
 import {CpfCnpjPipe} from "./pipes/cpf-cnpj.pipe";
 import {TelefoneComponent} from "./components/telefone/telefone.component";
+import {CepComponent} from "./components/cep/cep.component";
 
 export {NgxBrValidators} from "./ngx-br-validators";
 
@@ -17,13 +18,15 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CpfComponent,
     CnpjComponent,
     CpfCnpjPipe,
-    TelefoneComponent
+    TelefoneComponent,
+    CepComponent
   ],
   exports: [
     CpfComponent,
     CnpjComponent,
     CpfCnpjPipe,
-    TelefoneComponent
+    TelefoneComponent,
+    CepComponent
   ]
 })
 export class NgxBrModule {
