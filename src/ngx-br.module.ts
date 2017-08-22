@@ -8,6 +8,7 @@ import {TelefoneComponent} from "./components/telefone/telefone.component";
 import {CepComponent} from "./components/cep/cep.component";
 import {CpfMaskDirective} from "./components/cpf/cpf.mask.directive";
 import {CnpjMaskDirective} from "./components/cnpj/cnpj.mask.directive";
+import {CepMaskDirective} from "./components/cep/cep.mask.directive";
 
 export {NgxBrValidators} from "./ngx-br-validators";
 
@@ -23,7 +24,8 @@ export {NgxBrValidators} from "./ngx-br-validators";
     TelefoneComponent,
     CepComponent,
     CpfMaskDirective,
-    CnpjMaskDirective
+    CnpjMaskDirective,
+    CepMaskDirective
   ],
   exports: [
     CpfComponent,
