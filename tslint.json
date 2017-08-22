@@ -83,7 +83,7 @@
     "directive-selector": [
       true,
       "attribute",
-      "br",
+      false,
       "camelCase"
     ],
     "component-selector": [

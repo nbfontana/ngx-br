@@ -9,11 +9,11 @@ let cepPattern = new StringMask('00000-000');
 @Component({
   selector: 'cep',
   template: `
-      <input class="form-control" type="text" maxlength="9"
-             [ngModel]="formatter(value)" 
-             (ngModelChange)="parser($event)" 
-             (keydown)="onkeydown($event)"
-             (blur)="blurEvt($event)">
+    <input class="form-control" type="text" maxlength="9"
+           [ngModel]="formatter(value)"
+           (ngModelChange)="parser($event)"
+           (keydown)="onkeydown($event)"
+           (blur)="blurEvt($event)">
   `,
   providers: [
     {

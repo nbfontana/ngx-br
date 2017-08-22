@@ -6,6 +6,7 @@ import {CnpjComponent} from "./components/cnpj/cnpj.component";
 import {CpfCnpjPipe} from "./pipes/cpf-cnpj.pipe";
 import {TelefoneComponent} from "./components/telefone/telefone.component";
 import {CepComponent} from "./components/cep/cep.component";
+import {CpfMaskDirective} from "./components/cpf/cpf.mask.directive";
 
 export {NgxBrValidators} from "./ngx-br-validators";
 
@@ -19,7 +20,8 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CnpjComponent,
     CpfCnpjPipe,
     TelefoneComponent,
-    CepComponent
+    CepComponent,
+    CpfMaskDirective
   ],
   exports: [
     CpfComponent,

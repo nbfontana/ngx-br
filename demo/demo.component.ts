@@ -9,6 +9,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
       <div class="row">
         <div class="col-md-4">
           <cpf formControlName="cpf" [placeholder]="'000.000.000-00'"></cpf>
+          {{form.get('cpf').value}}
           <span *ngIf="form.get('cpf').hasError('cpf')" class="text-danger">CPF Inválido</span>
         </div>
       </div>

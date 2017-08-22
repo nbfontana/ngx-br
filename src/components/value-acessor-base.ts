@@ -3,8 +3,8 @@ import {ControlValueAccessor} from "@angular/forms";
 export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
 
   private innerValue: T;
-  private changed = new Array<(value: T) => void>();
-  private touched = new Array<() => void>();
+  public onChange: any = [];
+  public onTouched: any = [];
 
   get value(): T {
     return this.innerValue;
@@ -12,22 +12,22 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
 
   set value(value: T) {
     this.innerValue = value;
-    this.changed.forEach(f => f(value));
+    this.onChange.forEach(f => f(value));
   }
 
   writeValue(value: T) {
     this.innerValue = value;
   }
 
-  registerOnChange(fn: (value: T) => void) {
-    this.changed.push(fn);
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
   }
 
-  registerOnTouched(fn: () => void) {
-    this.touched.push(fn);
+  registerOnTouched(fn: any): void {
+    this.onTouched = fn;
   }
 
   touch() {
-    this.touched.forEach(f => f());
+    this.onTouched.forEach(f => f());
   }
 }

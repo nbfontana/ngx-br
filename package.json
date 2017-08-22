@@ -110,6 +110,7 @@
   },
   "dependencies": {
     "ngx-utilities": "0.0.20",
-    "string-mask": "0.3.0"
+    "string-mask": "0.3.0",
+    "vanilla-masker": "^1.2.0"
   }
 }
