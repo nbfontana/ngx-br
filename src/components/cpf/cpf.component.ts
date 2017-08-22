@@ -1,4 +1,4 @@
-import {Component, EventEmitter, HostListener, Output, Input, ViewChild, ElementRef} from "@angular/core";
+import {Component, EventEmitter, HostListener, Output, Input} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
 import {KeyboardUtils} from "ngx-utilities";
