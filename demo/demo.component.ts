@@ -9,14 +9,19 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
       <div class="row">
         <div class="col-md-4">
           <cpf formControlName="cpf" [placeholder]="'000.000.000-00'"></cpf>
-          {{form.get('cpf').value}}
           <span *ngIf="form.get('cpf').hasError('cpf')" class="text-danger">CPF Inválido</span>
+          <p>Valor do form: {{form.get('cpf').value}}</p>
+          <p>CpfCnpjPipe: {{form.get('cpf').value | cpfOuCnpj}}</p>
+          <p>CpfPipe: {{form.get('cpf').value | cpf}}</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-4">
           <cnpj formControlName="cnpj" [placeholder]="'00.000.000/0000-00'"></cnpj>
           <span *ngIf="form.get('cnpj').hasError('cnpj')" class="text-danger">CNPJ Inválido</span>
+          <p>Valor do form: {{form.get('cnpj').value}}</p>
+          <p>CpfCnpjPipe: {{form.get('cnpj').value | cpfOuCnpj}}</p>
+          <p>CnpjPipe: {{form.get('cnpj').value | cnpj}}</p>
         </div>
       </div>
       <div class="row">
