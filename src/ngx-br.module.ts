@@ -48,7 +48,13 @@ export {NgxBrValidators} from "./ngx-br-validators";
     //Pipes
     CnpjPipe,
     CpfPipe,
-    CpfCnpjPipe
+    CpfCnpjPipe,
+
+    //Directives
+    CpfMaskDirective,
+    CnpjMaskDirective,
+    CepMaskDirective,
+    TelefoneMaskDirective
   ]
 })
 export class NgxBrModule {

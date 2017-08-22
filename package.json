@@ -32,11 +32,13 @@
     "url": "git+https://github.com/nbfontana/ngx-br.git"
   },
   "keywords": [
-    "angular2",
+    "angular 2",
     "angular",
     "pt-br",
     "cpf",
-    "cnpj"
+    "cnpj",
+    "cep",
+    "telefone"
   ],
   "author": "Neri Bez Fontana",
   "license": "MIT",
@@ -110,7 +112,6 @@
   },
   "dependencies": {
     "ngx-utilities": "0.0.20",
-    "string-mask": "0.3.0",
     "vanilla-masker": "^1.2.0"
   }
 }
