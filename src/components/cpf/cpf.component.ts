@@ -12,7 +12,6 @@ let cpfPattern = new StringMask('000.000.000-00');
     <input class="form-control" type="text" maxlength="14"
            placeholder="{{placeholder}}"
            (keydown)="onkeydown($event)"
-           [ngModel]="formatter(value)"
            (ngModelChange)="parser($event)"
            (blur)="blurEvt($event)">`,
   providers: [{
@@ -28,12 +27,8 @@ export class CpfComponent extends ValueAccessorBase<string> {
 
   private previousKeyDown;
 
-  public formatter(value: string) {
-    return (cpfPattern.apply(value) || '').trim().slice(0, 14);
-  }
-
   public parser(value: string) {
-    this.value = value ? value.replace(/[^\d]/g, '') : value;
+    this.value = CpfComponent.removeNotNumber(value);
   }
 
   public blurEvt(value: string): void {
@@ -43,11 +38,17 @@ export class CpfComponent extends ValueAccessorBase<string> {
   public onkeydown(e): void {
     let previousKeyDownIsCtrlA = this.previousKeyDown && this.previousKeyDown.keyCode === 65 && this.previousKeyDown.ctrlKey;
     let endsWithSpecialCharacter = new RegExp('.+[^0-9]$').test(e.target.value);
+
     if (e.keyCode === 8 && endsWithSpecialCharacter && !previousKeyDownIsCtrlA) {
       this.parser(e.target.value.slice(0, e.target.value.length - 2));
       e.preventDefault();
     }
+
     this.previousKeyDown = e;
+  }
+
+  @HostListener('keyup', ['$event']) onPaste(event: any) {
+    event.target.value = CpfComponent.formatter(event.target.value);
   }
 
   @HostListener('keydown', ['$event']) onKeyDown(event: any) {
@@ -67,12 +68,20 @@ export class CpfComponent extends ValueAccessorBase<string> {
       return;
     }
 
-    if (this.isNotANumber(e)) {
+    if (CpfComponent.isNotANumber(e)) {
       e.preventDefault();
     }
   }
 
-  private isNotANumber(event: KeyboardEvent) {
+  public static formatter(value: string) {
+    return cpfPattern.apply(CpfComponent.removeNotNumber(value));
+  }
+
+  private static removeNotNumber(value: string) {
+    return value ? value.replace(/[^\d]/g, '') : value;
+  }
+
+  private static isNotANumber(event: KeyboardEvent) {
     return (event.shiftKey || (event.keyCode < 48 || event.keyCode > 57)) &&
       (event.keyCode < 96 || event.keyCode > 105);
   }
