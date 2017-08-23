@@ -1,6 +1,7 @@
 import {cnpjValidationFn} from "./components/cnpj/cnpj.validator";
 import {cpfValidationFn} from "./components/cpf/cpf.validator";
 import {horaValidationFn} from "./components/hora/hora.validator";
+import {ValidatorFn} from "@angular/forms";
 
 /**
  * Provides a set of Brazilian validators used by form controls.
@@ -19,16 +20,16 @@ export class NgxBrValidators {
   /**
    * Validator that requires controls to match a valid CPF number.
    */
-  static cpf: (blockEqualNumberSequence?: boolean) => void = cpfValidationFn;
+  static cpf: (blockEqualNumberSequence?: boolean) => ValidatorFn = cpfValidationFn;
 
   /**
    * Validator that requires controls to match a valid CNPJ number.
    */
-  static cnpj: (blockEqualNumberSequence?: boolean) => void = cnpjValidationFn;
+  static cnpj: (blockEqualNumberSequence?: boolean) => ValidatorFn = cnpjValidationFn;
 
   /**
    * Validator that requires controls to match a valid HH:MM Hour
    */
-  static hora: () => void = horaValidationFn;
+  static hora: () => ValidatorFn = horaValidationFn;
 
 }
