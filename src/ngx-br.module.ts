@@ -12,6 +12,7 @@ import {CepMaskDirective} from "./components/cep/cep.mask.directive";
 import {TelefoneMaskDirective} from "./components/telefone/telefone.mask.directive";
 import {CpfPipe} from "./pipes/cpf.pipe";
 import {CnpjPipe} from "./pipes/cnpj.pipe";
+import {EstadosComponent} from "./components/estados/estados.component";
 
 export {NgxBrValidators} from "./ngx-br-validators";
 
@@ -26,6 +27,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CnpjComponent,
     TelefoneComponent,
     CepComponent,
+    EstadosComponent,
 
     //Pipes
     CpfPipe,
@@ -44,6 +46,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CnpjComponent,
     TelefoneComponent,
     CepComponent,
+    EstadosComponent,
 
     //Pipes
     CnpjPipe,

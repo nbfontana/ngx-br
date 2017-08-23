@@ -7,7 +7,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
   template: `
     <form class="container" [formGroup]="form">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 form-group">
           <cpf formControlName="cpf" [placeholder]="'000.000.000-00'"></cpf>
           <span *ngIf="form.get('cpf').hasError('cpf')" class="text-danger">CPF Inválido</span>
           <p>Valor do form: {{form.get('cpf').value}}</p>
@@ -16,7 +16,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 form-group">
           <cnpj formControlName="cnpj" [placeholder]="'00.000.000/0000-00'"></cnpj>
           <span *ngIf="form.get('cnpj').hasError('cnpj')" class="text-danger">CNPJ Inválido</span>
           <p>Valor do form: {{form.get('cnpj').value}}</p>
@@ -25,15 +25,27 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 form-group">
           <telefone formControlName="telefone" [placeholder]="'(48) 9 9999-9999'"></telefone>
           {{form.get('telefone').value}}
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 form-group">
           <cep formControlName="cep"></cep>
           {{form.get('cep').value}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 form-group">
+          <estados [(ngModel)]="estado"
+                   formControlName="estado"
+                   [disabled]="true"
+                   (ngModelChange)="change($event)"
+                   [placeholder]="'Escolhe aí'">
+          </estados><br>
+          <pre>{{ form.get('estado').value | json }}</pre>
+          <pre>{{ estado }}</pre>
         </div>
       </div>
     </form>
@@ -41,6 +53,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
 })
 export class DemoComponent {
 
+  public estado: string;
   public form: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -48,8 +61,14 @@ export class DemoComponent {
       cpf: [null, NgxBrValidators.cpf()],
       cnpj: [null, NgxBrValidators.cnpj()],
       telefone: [''],
-      cep: ['']
+      cep: [''],
+      estado: ['']
     });
+  }
+
+  change(v) {
+    console.log(v);
+    console.log(this.estado);
   }
 
 }
