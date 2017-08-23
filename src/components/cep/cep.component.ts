@@ -24,7 +24,7 @@ export class CepComponent extends ValueAccessorBase<string> {
     this.onChange(value);
   }
 
-  public blurEvt(value): void {
-    this.blur.next(value);
+  public blurEvt(event): void {
+    this.blur.emit(event);
   }
 }

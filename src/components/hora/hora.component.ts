@@ -31,6 +31,8 @@ export class HoraComponent extends ValueAccessorBase<string> {
       value = value.replace(/[^\d]/g, '').padEnd(4, '0');
       this.value = vanillaMasker.toPattern(value, '99:99');
     }
+
+    this.blur.emit(event);
   }
 
 }
