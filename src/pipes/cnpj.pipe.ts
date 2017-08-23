@@ -1,6 +1,6 @@
 import {Pipe, PipeTransform} from "@angular/core";
 
-let vanillaMasker = require('vanilla-masker');
+const vanillaMasker = require('vanilla-masker');
 const cnpjPattern = '99.999.999/9999-99';
 
 @Pipe({

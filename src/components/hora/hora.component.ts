@@ -2,7 +2,7 @@ import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core"
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
 
-let vanillaMasker = require('vanilla-masker');
+const vanillaMasker = require('vanilla-masker');
 
 @Component({
   selector: 'hora',

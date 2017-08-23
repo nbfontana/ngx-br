@@ -1,6 +1,6 @@
 import {Directive, ElementRef} from "@angular/core";
 
-let vanillaMasker = require('vanilla-masker');
+const vanillaMasker = require('vanilla-masker');
 
 @Directive({
   selector: '[cpfMask]'
