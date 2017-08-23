@@ -43,9 +43,19 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
                    [disabled]="true"
                    (ngModelChange)="change($event)"
                    [placeholder]="'Escolhe aí'">
-          </estados><br>
+          </estados>
+          <br>
           <pre>{{ form.get('estado').value | json }}</pre>
           <pre>{{ estado }}</pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 form-group">
+          <hora [(ngModel)]="hora" formControlName="hora" (ngModelChange)="change($event)"></hora>
+          <br>
+          <span *ngIf="form.get('hora').hasError('hora')" class="text-danger">Hora inválida</span>
+          <pre>{{ form.get('hora').value | json }}</pre>
+          <pre>{{ hora }}</pre>
         </div>
       </div>
     </form>
@@ -54,6 +64,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
 export class DemoComponent {
 
   public estado: string;
+  public hora: string;
   public form: FormGroup;
 
   constructor(private fb: FormBuilder) {
@@ -62,13 +73,13 @@ export class DemoComponent {
       cnpj: [null, NgxBrValidators.cnpj()],
       telefone: [''],
       cep: [''],
-      estado: ['']
+      estado: [''],
+      hora: ['', NgxBrValidators.hora()]
     });
   }
 
   change(v) {
     console.log(v);
-    console.log(this.estado);
   }
 
 }
