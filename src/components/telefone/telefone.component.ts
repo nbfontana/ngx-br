@@ -17,7 +17,7 @@ import {ValueAccessorBase} from "../value-acessor-base";
 })
 export class TelefoneComponent extends ValueAccessorBase<string> {
 
-  @Input() placeholder: string;
+  @Input() placeholder: string = '(99) 9 9999-9999';
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {
