@@ -19,6 +19,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
             <div class="col-md-4 form-group">
               <label>CNPJ</label>
               <cnpj formControlName="cnpj" [placeholder]="'00.000.000/0000-00'"></cnpj>
+              <validacao-cnpj [control]="form.get('cnpj')"></validacao-cnpj>
             </div>
             <div class="col-md-4 form-group">
               <label>Telefone</label>
