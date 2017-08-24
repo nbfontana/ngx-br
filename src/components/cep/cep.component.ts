@@ -22,6 +22,7 @@ export class CepComponent extends ValueAccessorBase<string> {
   notifyChange(value: any) {
     value = value ? value.replace(/[^\d]/g, '').trim().slice(0, 8) : value;
     this.onChange(value);
+    this.onTouched();
   }
 
   public blurEvt(event): void {

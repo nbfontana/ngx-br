@@ -24,6 +24,7 @@ export class CpfComponent extends ValueAccessorBase<string> {
   notifyChange(value: any) {
     value = value ? value.replace(/[^\d]/g, '').trim().slice(0, 11) : value;
     this.onChange(value);
+    this.onTouched();
   }
 
   public blurEvt(event): void {

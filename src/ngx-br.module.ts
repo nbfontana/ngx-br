@@ -15,6 +15,7 @@ import {CnpjPipe} from "./pipes/cnpj.pipe";
 import {EstadosComponent} from "./components/estados/estados.component";
 import {HoraComponent} from "./components/hora/hora.component";
 import {HoraMaskDirective} from "./components/hora/hora.mask.directive";
+import {ValidacaoCpfComponent} from "./components/cpf/cpf.component.validacao";
 
 export {NgxBrValidators} from "./ngx-br-validators";
 
@@ -26,6 +27,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
   declarations: [
     // Components
     CpfComponent,
+    ValidacaoCpfComponent,
     CnpjComponent,
     TelefoneComponent,
     CepComponent,
@@ -47,6 +49,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
   exports: [
     // Components
     CpfComponent,
+    ValidacaoCpfComponent,
     CnpjComponent,
     TelefoneComponent,
     CepComponent,

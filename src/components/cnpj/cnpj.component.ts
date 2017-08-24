@@ -24,6 +24,7 @@ export class CnpjComponent extends ValueAccessorBase<string> {
   notifyChange(value: any) {
     value = value ? value.replace(/[^\d]/g, '').trim().slice(0, 14) : value;
     this.onChange(value);
+    this.onTouched();
   }
 
   public blurEvt(event): void {
