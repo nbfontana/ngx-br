@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.18"></a>
+## [0.0.18](https://github.com/nbfontana/ngx-br/compare/v0.0.17...v0.0.18) (2017-08-24)
+
+
+### Features
+
+* validacao cnpj component ([13e54eb](https://github.com/nbfontana/ngx-br/commit/13e54eb))
+* validacao cpf component ([0487b3d](https://github.com/nbfontana/ngx-br/commit/0487b3d))
+
+
+
 <a name="0.0.17"></a>
 ## [0.0.17](https://github.com/nbfontana/ngx-br/compare/v0.0.16...v0.0.17) (2017-08-24)
 
