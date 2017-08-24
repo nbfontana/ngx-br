@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.17"></a>
+## [0.0.17](https://github.com/nbfontana/ngx-br/compare/v0.0.16...v0.0.17) (2017-08-24)
+
+
+### Bug Fixes
+
+* alterado tamanho dos inputs e aplicado slice sem a maskara para mandar para o ngmodel ([945d85e](https://github.com/nbfontana/ngx-br/commit/945d85e))
+
+
+
 <a name="0.0.16"></a>
 ## [0.0.16](https://github.com/nbfontana/ngx-br/compare/v0.0.15...v0.0.16) (2017-08-23)
 
