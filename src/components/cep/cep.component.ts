@@ -20,7 +20,7 @@ export class CepComponent extends ValueAccessorBase<string> {
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {
-    value = value ? value.replace(/[^\d]/g, '') : value;
+    value = value ? value.replace(/[^\d]/g, '').trim().slice(0, 8) : value;
     this.onChange(value);
   }
 
