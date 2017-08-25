@@ -14,7 +14,7 @@ https://nbfontana.github.io/ngx-br/
 
 - [About](#about)
 - [Installation](#installation)
-- [Documentation](#documentation)
+- [Documentation](https://nbfontana.github.io/ngx-br/docs/)
 - [Development](#development)
 - [License](#license)
 
@@ -62,9 +62,6 @@ You may also find it useful to view the [demo source](https://github.com/nbfonta
     // everything is exported ngxBr namespace
 </script>
 ```
-
-## Documentation
-  TODO
 
 ## Development
 
