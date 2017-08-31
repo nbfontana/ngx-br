@@ -6,7 +6,7 @@ export function cnpjValidationFn(): ValidatorFn {
   return (control: AbstractControl) => {
     let value = control.value;
 
-    if (!CNPJ.isValid(value)) {
+    if (value && !CNPJ.isValid(value)) {
       return {
         cnpj: true
       };

@@ -6,7 +6,7 @@ export function cpfValidationFn(): ValidatorFn {
   return (control: AbstractControl) => {
     let value = control.value;
 
-    if (!CPF.isValid(value)) {
+    if (value && !CPF.isValid(value)) {
       return {
         cpf: true
       };
