@@ -5,7 +5,7 @@ import {ValueAccessorBase} from "../value-acessor-base";
 @Component({
   selector: 'cnpj',
   template: `
-    <input class="form-control" type="text" maxlength="18"
+    <input class="form-control" type="text" maxlength="18" id="{{id}}"
            placeholder="{{placeholder}}"
            [ngModel]="value" cnpjMask
            (ngModelChange)="notifyChange($event)"
@@ -19,6 +19,8 @@ import {ValueAccessorBase} from "../value-acessor-base";
 export class CnpjComponent extends ValueAccessorBase<string> {
 
   @Input() placeholder: string;
+  @Input() id: string;
+
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {

@@ -5,7 +5,7 @@ import {ValueAccessorBase} from "../value-acessor-base";
 @Component({
   selector: 'telefone',
   template: `
-    <input class="form-control" type="text" maxlength="16"
+    <input class="form-control" type="text" maxlength="16" id="{{id}}"
            [placeholder]="placeholder"
            [ngModel]="value" telefoneMask
            (ngModelChange)="notifyChange($event)">`,
@@ -18,6 +18,8 @@ import {ValueAccessorBase} from "../value-acessor-base";
 export class TelefoneComponent extends ValueAccessorBase<string> {
 
   @Input() placeholder: string = '(99) 9 9999-9999';
+  @Input() id: string;
+
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {

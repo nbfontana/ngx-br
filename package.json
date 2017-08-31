@@ -111,7 +111,7 @@
     }
   },
   "dependencies": {
-    "ngx-utilities": "0.0.20",
+    "ngx-utilities": "0.0.24",
     "vanilla-masker": "^1.2.0"
   }
 }

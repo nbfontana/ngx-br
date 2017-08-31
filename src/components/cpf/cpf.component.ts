@@ -5,7 +5,7 @@ import {ValueAccessorBase} from "../value-acessor-base";
 @Component({
   selector: 'cpf',
   template: `
-    <input type="text" class="form-control" maxlength="14"
+    <input type="text" class="form-control" maxlength="14" id="{{id}}"
            placeholder="{{placeholder}}"
            [ngModel]="value" cpfMask
            (ngModelChange)="notifyChange($event)"
@@ -19,6 +19,8 @@ import {ValueAccessorBase} from "../value-acessor-base";
 export class CpfComponent extends ValueAccessorBase<string> {
 
   @Input() placeholder: string;
+  @Input() id: string;
+
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {

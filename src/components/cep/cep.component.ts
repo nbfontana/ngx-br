@@ -1,11 +1,11 @@
-import {Component, EventEmitter, forwardRef, Output} from "@angular/core";
+import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
 
 @Component({
   selector: 'cep',
   template: `
-    <input class="form-control" type="text" maxlength="9"
+    <input class="form-control" type="text" maxlength="9" id="{{id}}"
            [ngModel]="value" cepMask
            (ngModelChange)="notifyChange($event)"
            (blur)="blurEvt($event)">`,
@@ -17,6 +17,7 @@ import {ValueAccessorBase} from "../value-acessor-base";
 })
 export class CepComponent extends ValueAccessorBase<string> {
 
+  @Input() id: string;
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {

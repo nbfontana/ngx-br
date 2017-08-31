@@ -8,7 +8,7 @@ const vanillaMasker = require('vanilla-masker');
   selector: 'hora',
   template: `
     <input
-      class="form-control text-right" horaMask
+      class="form-control text-right" horaMask id="{{id}}"
       type="text"
       maxlength="5"
       [placeholder]="placeholder"
@@ -23,6 +23,8 @@ const vanillaMasker = require('vanilla-masker');
 export class HoraComponent extends ValueAccessorBase<string> {
 
   @Input() placeholder: string = 'HH:MM';
+  @Input() id: string;
+
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   public blurEvt(event): void {
