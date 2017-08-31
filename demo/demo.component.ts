@@ -57,7 +57,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
 })
 export class DemoComponent {
 
-  public estado: string;
+  public estado: string = null;
   public hora: string;
   public form: FormGroup;
 
@@ -67,7 +67,7 @@ export class DemoComponent {
       cnpj: [null, NgxBrValidators.cnpj()],
       telefone: [''],
       cep: [''],
-      estado: [''],
+      estado: [null],
       hora: ['', NgxBrValidators.hora()]
     });
   }
