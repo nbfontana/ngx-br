@@ -6,56 +6,50 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
   selector: 'br-demo-app',
   template: `
     <form class="container" [formGroup]="form">
+
       <div class="row">
-        <div class="col-md-4 form-group">
-          <cpf formControlName="cpf" [placeholder]="'000.000.000-00'"></cpf>
-          <span *ngIf="form.get('cpf').hasError('cpf')" class="text-danger">CPF Inválido</span>
-          <p>Valor do form: {{form.get('cpf').value}}</p>
-          <p>CpfCnpjPipe: {{form.get('cpf').value | cpfOuCnpj}}</p>
-          <p>CpfPipe: {{form.get('cpf').value | cpf}}</p>
+        <div class="col-md-7 form-group">
+
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <label>CPF</label>
+              <cpf formControlName="cpf" [placeholder]="'000.000.000-00'"></cpf>
+              <validacao-cpf [control]="form.get('cpf')"></validacao-cpf>
+            </div>
+            <div class="col-md-4 form-group">
+              <label>CNPJ</label>
+              <cnpj formControlName="cnpj" [placeholder]="'00.000.000/0000-00'"></cnpj>
+              <validacao-cnpj [control]="form.get('cnpj')"></validacao-cnpj>
+            </div>
+            <div class="col-md-4 form-group">
+              <label>Telefone</label>
+              <telefone formControlName="telefone" [placeholder]="'(48) 9 9999-9999'"></telefone>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <label>UF</label>
+              <estados formControlName="estado"
+                       [disabled]="true"
+                       (ngModelChange)="change($event)"
+                       [placeholder]="'Escolhe aí'">
+              </estados>
+            </div>
+            <div class="col-md-4 form-group">
+              <label>Cep</label>
+              <cep formControlName="cep"></cep>
+            </div>
+            <div class="col-md-4 form-group">
+              <label>Hora</label>
+              <hora [(ngModel)]="hora" formControlName="hora" (ngModelChange)="change($event)"></hora>
+            </div>
+          </div>
+
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 form-group">
-          <cnpj formControlName="cnpj" [placeholder]="'00.000.000/0000-00'"></cnpj>
-          <span *ngIf="form.get('cnpj').hasError('cnpj')" class="text-danger">CNPJ Inválido</span>
-          <p>Valor do form: {{form.get('cnpj').value}}</p>
-          <p>CpfCnpjPipe: {{form.get('cnpj').value | cpfOuCnpj}}</p>
-          <p>CnpjPipe: {{form.get('cnpj').value | cnpj}}</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 form-group">
-          <telefone formControlName="telefone" [placeholder]="'(48) 9 9999-9999'"></telefone>
-          {{form.get('telefone').value}}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 form-group">
-          <cep formControlName="cep"></cep>
-          {{form.get('cep').value}}
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 form-group">
-          <estados [(ngModel)]="estado"
-                   formControlName="estado"
-                   [disabled]="true"
-                   (ngModelChange)="change($event)"
-                   [placeholder]="'Escolhe aí'">
-          </estados>
-          <br>
-          <pre>{{ form.get('estado').value | json }}</pre>
-          <pre>{{ estado }}</pre>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 form-group">
-          <hora [(ngModel)]="hora" formControlName="hora" (ngModelChange)="change($event)"></hora>
-          <br>
-          <span *ngIf="form.get('hora').hasError('hora')" class="text-danger">Hora inválida</span>
-          <pre>{{ form.get('hora').value | json }}</pre>
-          <pre>{{ hora }}</pre>
+        <div class="col-md-5 form-group">
+          <p>Formulário:</p>
+          <pre>{{ form.value | json }}</pre>
         </div>
       </div>
     </form>
