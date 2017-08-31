@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.19"></a>
+## [0.0.19](https://github.com/nbfontana/ngx-br/compare/v0.0.18...v0.0.19) (2017-08-31)
+
+
+### Bug Fixes
+
+* cpf test ([b4cc822](https://github.com/nbfontana/ngx-br/commit/b4cc822))
+
+
+### Features
+
+* added id tags in all components ([ff3e61d](https://github.com/nbfontana/ngx-br/commit/ff3e61d))
+
+
+
 <a name="0.0.18"></a>
 ## [0.0.18](https://github.com/nbfontana/ngx-br/compare/v0.0.17...v0.0.18) (2017-08-24)
 
