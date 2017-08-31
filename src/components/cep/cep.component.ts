@@ -5,7 +5,8 @@ import {ValueAccessorBase} from "../value-acessor-base";
 @Component({
   selector: 'cep',
   template: `
-    <input class="form-control" type="text" maxlength="9" id="{{id}}"
+    <input class="form-control" type="text" maxlength="9"
+           id="{{id}}" placeholder="{{placeholder}}"
            [ngModel]="value" cepMask
            (ngModelChange)="notifyChange($event)"
            (blur)="blurEvt($event)">`,
@@ -18,6 +19,7 @@ import {ValueAccessorBase} from "../value-acessor-base";
 export class CepComponent extends ValueAccessorBase<string> {
 
   @Input() id: string;
+  @Input() placeholder: string;
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   notifyChange(value: any) {
