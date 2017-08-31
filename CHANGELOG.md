@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.20"></a>
+## [0.0.20](https://github.com/nbfontana/ngx-br/compare/v0.0.19...v0.0.20) (2017-08-31)
+
+
+### Bug Fixes
+
+* cpf and cnpj validators ([fa11cb6](https://github.com/nbfontana/ngx-br/commit/fa11cb6))
+
+
+### Features
+
+* placeholder on cep ([d71370e](https://github.com/nbfontana/ngx-br/commit/d71370e))
+
+
+
 <a name="0.0.19"></a>
 ## [0.0.19](https://github.com/nbfontana/ngx-br/compare/v0.0.18...v0.0.19) (2017-08-31)
 
