@@ -7,7 +7,8 @@ import {cnpjPattern} from "../constants";
   selector: 'cnpj',
   template: `
     <input class="form-control" type="text" maxlength="18" id="{{id}}"
-           placeholder="{{placeholder}}"
+           placeholder="{{placeholder}}" 
+           disabled="{{disabled}}"
            [(ngModel)]="value" cnpjMask
            (ngModelChange)="notifyChanges($event)"
            (blur)="blurEvt($event)">`,

@@ -7,6 +7,7 @@ import {telefonePattern} from "../constants";
   selector: 'telefone',
   template: `
     <input class="form-control" type="text" maxlength="16" id="{{id}}"
+           disabled="{{disabled}}"
            [placeholder]="placeholder"
            [(ngModel)]="value" telefoneMask
            (ngModelChange)="notifyChanges($event)">`,

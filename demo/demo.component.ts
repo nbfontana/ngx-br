@@ -33,7 +33,6 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
             <div class="col-md-4 form-group">
               <label>UF</label>
               <estados [(ngModel)]="model.estado" [ngModelOptions]="{standalone: true}"
-                       [disabled]="true"
                        (ngModelChange)="change($event)"
                        [placeholder]="'Escolhe aí'">
               </estados>

@@ -10,7 +10,8 @@ const vanillaMasker = require('vanilla-masker');
   template: `
     <input
       class="form-control text-right" horaMask id="{{id}}"
-      type="text" maxlength="5"
+      type="text" maxlength="5" 
+      disabled="{{disabled}}"
       [placeholder]="placeholder"
       [(ngModel)]="value"
       (blur)="blurEvt($event)">`,

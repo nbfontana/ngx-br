@@ -6,7 +6,7 @@ import {ValueAccessorBase} from "../value-acessor-base";
 @Component({
   selector: 'estados',
   template: `
-    <select class="form-control" [(ngModel)]="value" id="{{id}}">
+    <select class="form-control" [(ngModel)]="value" id="{{id}}" [disabled]="disabled">
       <option value="null" disabled selected>{{placeholder}}</option>
       <option *ngFor="let estado of estados" [ngValue]="estado.sigla">{{estado.descricao}}</option>
     </select>`,

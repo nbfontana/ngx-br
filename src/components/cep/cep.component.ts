@@ -8,6 +8,7 @@ import {cepPattern} from "../constants";
   template: `
     <input class="form-control" type="text" maxlength="9"
            id="{{id}}" placeholder="{{placeholder}}"
+           disabled="{{disabled}}"
            [(ngModel)]="value" cepMask
            (ngModelChange)="notifyChanges($event)"
            (blur)="blurEvt($event)">`,

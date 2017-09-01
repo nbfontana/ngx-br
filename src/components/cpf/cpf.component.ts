@@ -7,7 +7,8 @@ import {cpfPattern} from "../constants";
   selector: 'cpf',
   template: `
     <input type="text" class="form-control" maxlength="14" id="{{id}}"
-           placeholder="{{placeholder}}"
+           placeholder="{{placeholder}}" 
+           disabled="{{disabled}}"
            [(ngModel)]="value" cpfMask
            (ngModelChange)="notifyChanges($event)"
            (blur)="blurEvt($event)">`,
