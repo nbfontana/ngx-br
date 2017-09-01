@@ -1,4 +1,5 @@
 import {Directive, ElementRef} from "@angular/core";
+import {cnpjPattern} from "../constants";
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -10,6 +11,6 @@ export class CnpjMaskDirective {
 
   constructor(public element: ElementRef) {
     this.nativeElement = this.element.nativeElement;
-    vanillaMasker(this.nativeElement).maskPattern('99.999.999/9999-99');
+    vanillaMasker(this.nativeElement).maskPattern(cnpjPattern);
   }
 }

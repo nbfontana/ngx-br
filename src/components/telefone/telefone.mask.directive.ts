@@ -1,4 +1,5 @@
 import {Directive, ElementRef} from "@angular/core";
+import {telefonePattern} from "../constants";
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -10,6 +11,6 @@ export class TelefoneMaskDirective {
 
   constructor(public element: ElementRef) {
     this.nativeElement = this.element.nativeElement;
-    vanillaMasker(this.nativeElement).maskPattern('(99) 9 9999-9999');
+    vanillaMasker(this.nativeElement).maskPattern(telefonePattern);
   }
 }

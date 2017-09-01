@@ -1,4 +1,5 @@
 import {Directive, ElementRef} from "@angular/core";
+import {horaPattern} from "../constants";
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -10,6 +11,6 @@ export class HoraMaskDirective {
 
   constructor(public element: ElementRef) {
     this.nativeElement = this.element.nativeElement;
-    vanillaMasker(this.nativeElement).maskPattern('99:99');
+    vanillaMasker(this.nativeElement).maskPattern(horaPattern);
   }
 }

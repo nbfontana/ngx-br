@@ -1,7 +1,7 @@
 import {Directive, ElementRef} from "@angular/core";
+import {cpfPattern} from "../constants";
 
 const vanillaMasker = require('vanilla-masker');
-
 @Directive({
   selector: '[cpfMask]'
 })
@@ -10,6 +10,6 @@ export class CpfMaskDirective {
 
   constructor(public element: ElementRef) {
     this.nativeElement = this.element.nativeElement;
-    vanillaMasker(this.nativeElement).maskPattern('999.999.999-99');
+    vanillaMasker(this.nativeElement).maskPattern(cpfPattern);
   }
 }

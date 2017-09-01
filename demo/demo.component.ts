@@ -13,24 +13,26 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
           <div class="row">
             <div class="col-md-4 form-group">
               <label>CPF</label>
-              <cpf formControlName="cpf" [placeholder]="'000.000.000-00'"></cpf>
+              <cpf [(ngModel)]="model.cpf" formControlName="cpf" [placeholder]="'000.000.000-00'"
+                   (blur)="change($event)"></cpf>
               <validacao-cpf [control]="form.get('cpf')"></validacao-cpf>
             </div>
             <div class="col-md-4 form-group">
               <label>CNPJ</label>
-              <cnpj formControlName="cnpj" [placeholder]="'00.000.000/0000-00'"></cnpj>
+              <cnpj [(ngModel)]="model.cnpj" formControlName="cnpj" [placeholder]="'00.000.000/0000-00'"></cnpj>
               <validacao-cnpj [control]="form.get('cnpj')"></validacao-cnpj>
             </div>
             <div class="col-md-4 form-group">
               <label>Telefone</label>
-              <telefone formControlName="telefone" [placeholder]="'(48) 9 9999-9999'"></telefone>
+              <telefone [(ngModel)]="model.telefone" formControlName="telefone"
+                        [placeholder]="'(48) 9 9999-9999'"></telefone>
             </div>
           </div>
 
           <div class="row">
             <div class="col-md-4 form-group">
               <label>UF</label>
-              <estados formControlName="estado"
+              <estados [(ngModel)]="model.estado" [ngModelOptions]="{standalone: true}"
                        [disabled]="true"
                        (ngModelChange)="change($event)"
                        [placeholder]="'Escolhe aí'">
@@ -38,11 +40,11 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
             </div>
             <div class="col-md-4 form-group">
               <label>Cep</label>
-              <cep formControlName="cep"></cep>
+              <cep [(ngModel)]="model.cep" formControlName="cep"></cep>
             </div>
             <div class="col-md-4 form-group">
               <label>Hora</label>
-              <hora [(ngModel)]="hora" formControlName="hora" (ngModelChange)="change($event)"></hora>
+              <hora [(ngModel)]="model.hora" formControlName="hora" (ngModelChange)="change($event)"></hora>
             </div>
           </div>
 
@@ -57,23 +59,38 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
 })
 export class DemoComponent {
 
-  public estado: string = null;
-  public hora: string;
   public form: FormGroup;
+  public model = new Teste();
 
   constructor(private fb: FormBuilder) {
     this.form = fb.group({
       cpf: [null, NgxBrValidators.cpf()],
       cnpj: [null, NgxBrValidators.cnpj()],
-      telefone: [''],
-      cep: [''],
+      telefone: [null],
+      cep: [null],
       estado: [null],
-      hora: ['', NgxBrValidators.hora()]
+      hora: [null, NgxBrValidators.hora()]
     });
+    setTimeout(() => {
+      this.form.get('cpf').setValue("08754248990");
+      this.model.estado = "SC";
+      this.model.hora = "22:22";
+      this.model.cep = "88715000";
+      this.model.telefone = "48999999999";
+      this.model.cnpj = "98798798";
+    }, 1000)
   }
 
-  change(v) {
-    console.log(v);
+  public change(value: any) {
+    console.log(value);
   }
+}
 
+class Teste {
+  estado: string;
+  hora: string;
+  cep: string;
+  telefone: string;
+  cnpj: string;
+  cpf: string;
 }

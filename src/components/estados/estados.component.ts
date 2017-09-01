@@ -51,4 +51,9 @@ export class EstadosComponent extends ValueAccessorBase<Estado> {
     new Estado('TO', 'Tocantins'),
   ];
 
+  pattern: string;
+
+  transform(T): Estado {
+    return undefined;
+  }
 }

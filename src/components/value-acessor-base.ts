@@ -1,11 +1,17 @@
 import {ControlValueAccessor} from "@angular/forms";
 
+const vanillaMasker = require('vanilla-masker');
+
 export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
 
   private innerValue: T;
 
   public onChange: any = () => {};
   public onTouched: any = () => {};
+
+  abstract transform(T): T;
+
+  abstract pattern: string;
 
   get value(): T {
     return this.innerValue;
@@ -18,7 +24,11 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
   }
 
   writeValue(value: T) {
-    this.innerValue = value;
+    if (!this.pattern) {
+      this.innerValue = value;
+    } else {
+      this.innerValue = value ? vanillaMasker.toPattern(value, this.pattern) : value;
+    }
   }
 
   registerOnChange(fn: any): void {
@@ -31,5 +41,11 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
 
   touch() {
     this.onTouched.forEach(f => f());
+  }
+
+  notifyChanges(value: T) {
+    value = this.transform(value);
+    this.onChange(value);
+    this.onTouched();
   }
 }

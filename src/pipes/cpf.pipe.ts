@@ -1,7 +1,7 @@
 import {Pipe, PipeTransform} from "@angular/core";
+import {cpfPattern} from "../components/constants";
 
 const vanillaMasker = require('vanilla-masker');
-const cpfPattern = '999.999.999-99';
 
 @Pipe({
   name: 'cpf'
