@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.22"></a>
+## [0.0.22](https://github.com/nbfontana/ngx-br/compare/v0.0.21...v0.0.22) (2017-09-01)
+
+
+### Bug Fixes
+
+* two way data binding and mask apply ([d53f98b](https://github.com/nbfontana/ngx-br/commit/d53f98b))
+
+
+
 <a name="0.0.21"></a>
 ## [0.0.21](https://github.com/nbfontana/ngx-br/compare/v0.0.20...v0.0.21) (2017-08-31)
 
