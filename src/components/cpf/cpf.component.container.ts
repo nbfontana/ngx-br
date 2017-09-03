@@ -2,19 +2,20 @@ import {Component, Input} from '@angular/core';
 import {FormControl} from "@angular/forms";
 
 @Component({
-  selector: 'validacao-cnpj',
+  selector: 'cpf-container',
   template: `
+    <ng-content></ng-content>
     <span *ngIf="shouldShowErrors()" style="color: #f05050">
       <span *ngIf="control.hasError('required')">{{requiredMsg}}</span>
-      <span *ngIf="!control.hasError('required') && control.hasError('cnpj')">{{cnpjMsg}}</span>
+      <span *ngIf="!control.hasError('required') && control.hasError('cpf')">{{cpfMsg}}</span>
     </span>
   `
 })
-export class ValidacaoCnpjComponent {
+export class ValidacaoCpfComponent {
 
   @Input() control: FormControl;
   @Input() requiredMsg: string = 'Este campo é obrigatório';
-  @Input() cnpjMsg: string = 'CNPJ Inválido';
+  @Input() cpfMsg: string = 'CPF Inválido';
 
   public shouldShowErrors(): boolean {
     return this.control && !this.control.valid && !this.control.pristine &&
