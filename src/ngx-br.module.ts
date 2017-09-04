@@ -70,6 +70,11 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CepMaskDirective,
     TelefoneMaskDirective,
     HoraMaskDirective
+  ],
+  providers: [
+    CnpjPipe,
+    CpfPipe,
+    CpfCnpjPipe
   ]
 })
 export class NgxBrModule {
