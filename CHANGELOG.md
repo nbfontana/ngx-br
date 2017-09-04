@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.25"></a>
+## [0.0.25](https://github.com/nbfontana/ngx-br/compare/v0.0.24...v0.0.25) (2017-09-04)
+
+
+### Features
+
+* telefone pipe ([9aa978d](https://github.com/nbfontana/ngx-br/commit/9aa978d))
+
+
+
 <a name="0.0.24"></a>
 ## [0.0.24](https://github.com/nbfontana/ngx-br/compare/v0.0.23...v0.0.24) (2017-09-04)
 
