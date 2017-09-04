@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {NgxBrValidators} from "../src/ngx-br-validators";
 
 @Component({
@@ -49,6 +49,13 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
                     (ngModelChange)="change($event)"></hora>
             </div>
           </div>
+          
+          <div class="row">
+            <div class="col-md-4">
+              <dinheiro [(ngModel)]="model.dinheiro" formControlName="dinheiro"></dinheiro>
+              <span *ngIf="form.get('dinheiro').hasError('dinheiroRequired')">Required</span>
+            </div>
+          </div>
 
         </div>
         <div class="col-md-5 form-group">
@@ -71,6 +78,7 @@ export class DemoComponent {
       telefone: [null],
       cep: [null],
       estado: [null],
+      dinheiro: [null, NgxBrValidators.dinheiroRequired()],
       hora: [null, NgxBrValidators.hora()]
     });
     setTimeout(() => {
@@ -95,4 +103,5 @@ class Teste {
   telefone: string;
   cnpj: string;
   cpf: string;
+  dinheiro: number;
 }

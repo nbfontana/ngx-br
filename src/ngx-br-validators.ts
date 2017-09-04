@@ -2,6 +2,7 @@ import {cnpjValidationFn} from "./components/cnpj/cnpj.validator";
 import {cpfValidationFn} from "./components/cpf/cpf.validator";
 import {horaValidationFn} from "./components/hora/hora.validator";
 import {ValidatorFn} from "@angular/forms";
+import {dinheiroValidationFn} from "./validators/dinheiro.required.validator";
 
 /**
  * Provides a set of Brazilian validators used by form controls.
@@ -31,5 +32,10 @@ export class NgxBrValidators {
    * Validator that requires controls to match a valid HH:MM Hour
    */
   static hora: () => ValidatorFn = horaValidationFn;
+
+  /**
+   * Validator that requires controls to match a number bigger than zero
+   */
+  static dinheiroRequired: () => ValidatorFn = dinheiroValidationFn;
 
 }
