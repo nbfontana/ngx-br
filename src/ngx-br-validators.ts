@@ -1,6 +1,6 @@
-import {cnpjValidationFn} from "./components/cnpj/cnpj.validator";
-import {cpfValidationFn} from "./components/cpf/cpf.validator";
-import {horaValidationFn} from "./components/hora/hora.validator";
+import {cnpjValidationFn} from "./validators/cnpj.validator";
+import {cpfValidationFn} from "./validators/cpf.validator";
+import {horaValidationFn} from "./validators/hora.validator";
 import {ValidatorFn} from "@angular/forms";
 import {dinheiroValidationFn} from "./validators/dinheiro.required.validator";
 
