@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.0.27"></a>
+## [0.0.27](https://github.com/nbfontana/ngx-br/compare/v0.0.26...v0.0.27) (2017-09-06)
+
+
+### Features
+
+* dinheiro pipe ([71a46e9](https://github.com/nbfontana/ngx-br/commit/71a46e9))
+
+
+
 <a name="0.0.26"></a>
 ## [0.0.26](https://github.com/nbfontana/ngx-br/compare/v0.0.25...v0.0.26) (2017-09-04)
 
