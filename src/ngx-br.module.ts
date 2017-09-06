@@ -87,7 +87,8 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CnpjPipe,
     CpfPipe,
     CpfCnpjPipe,
-    TelefonePipe
+    TelefonePipe,
+    DinheiroPipe
   ]
 })
 export class NgxBrModule {
