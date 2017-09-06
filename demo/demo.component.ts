@@ -55,6 +55,11 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
               <dinheiro [(ngModel)]="model.dinheiro" formControlName="dinheiro"></dinheiro>
               <span *ngIf="form.get('dinheiro').hasError('dinheiroRequired')">Required</span>
             </div>
+            <div class="col-md-2">
+              {{10.6 | dinheiro}}
+              {{10.5 | dinheiro}}
+              {{1.23 | dinheiro}}
+            </div>
           </div>
 
         </div>

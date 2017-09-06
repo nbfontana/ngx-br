@@ -20,6 +20,7 @@ import {ValidacaoCnpjComponent} from "./components/cnpj/cnpj.component.container
 import {TelefonePipe} from "./pipes/telefone.pipe";
 import {DinheiroMaskDirective} from "./components/dinheiro/dinheiro.mask.directive";
 import {DinheiroComponent} from "./components/dinheiro/dinheiro.component";
+import {DinheiroPipe} from "./pipes/dinheiro.pipe";
 
 export {NgxBrValidators} from "./ngx-br-validators";
 
@@ -45,6 +46,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CnpjPipe,
     CpfCnpjPipe,
     TelefonePipe,
+    DinheiroPipe,
 
     //Directives
     CpfMaskDirective,
@@ -71,6 +73,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CpfPipe,
     CpfCnpjPipe,
     TelefonePipe,
+    DinheiroPipe,
 
     //Directives
     CpfMaskDirective,

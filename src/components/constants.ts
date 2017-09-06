@@ -7,4 +7,11 @@ export const cepPattern = '99999-999';
 
 // Placeholders
 export const dinheiroPlaceholder = 'R$ 0,00';
+export const dinheiroPatternConfig = {
+  precision: 2,
+  separator: ',',
+  delimiter: '.',
+  unit: 'R$',
+  zeroCents: false
+};
 
