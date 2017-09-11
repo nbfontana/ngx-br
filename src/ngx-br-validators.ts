@@ -3,6 +3,7 @@ import {cpfValidationFn} from "./validators/cpf.validator";
 import {horaValidationFn} from "./validators/hora.validator";
 import {ValidatorFn} from "@angular/forms";
 import {dinheiroValidationFn} from "./validators/dinheiro.required.validator";
+import {percentualValidationFn} from "./validators/percentual.required.validator";
 
 /**
  * Provides a set of Brazilian validators used by form controls.
@@ -34,8 +35,13 @@ export class NgxBrValidators {
   static hora: () => ValidatorFn = horaValidationFn;
 
   /**
-   * Validator that requires controls to match a number bigger than zero
+   * Validator that requires controls to match a number bigger than zero (0.00) (0,00)
    */
   static dinheiroRequired: () => ValidatorFn = dinheiroValidationFn;
+
+  /**
+   * Validator that requires controls to match a percent value bigger than zero (0.0)
+   */
+  static percentualRequired: () => ValidatorFn = percentualValidationFn;
 
 }
