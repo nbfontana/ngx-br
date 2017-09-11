@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.1.0"></a>
+# [0.1.0](https://github.com/nbfontana/ngx-br/compare/v0.0.28...v0.1.0) (2017-09-11)
+
+
+### Features
+
+* percentual component and validator ([e85e3b9](https://github.com/nbfontana/ngx-br/commit/e85e3b9))
+
+
+
 <a name="0.0.28"></a>
 ## [0.0.28](https://github.com/nbfontana/ngx-br/compare/v0.0.27...v0.0.28) (2017-09-06)
 
