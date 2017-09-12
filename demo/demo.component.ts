@@ -104,6 +104,7 @@ export class DemoComponent {
       this.model.telefone = "48999999999";
       this.model.cnpj = "98798798";
       this.model.dinheiro = 150.78;
+      this.model.percentual = 15.9;
     }, 1000)
   }
 

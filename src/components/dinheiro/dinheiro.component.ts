@@ -2,6 +2,7 @@ import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core"
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
 import {dinheiroPatternConfig, dinheiroPlaceholder} from "../constants";
+import {removeNonDigitValues} from "../utils";
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -29,9 +30,9 @@ export class DinheiroComponent extends ValueAccessorBase<string> {
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   transform(value: string): string {
-    let transformedValue = this.removeNonDigitValues(value);
+    let transformedValue = removeNonDigitValues(value);
     transformedValue = vanillaMasker.toMoney(transformedValue);
-    transformedValue = this.removeNonDigitValues(transformedValue);
+    transformedValue = removeNonDigitValues(transformedValue);
 
     if (this.oneDotOnly) {
       return this.formatToOnly2Dots(transformedValue);
@@ -46,9 +47,5 @@ export class DinheiroComponent extends ValueAccessorBase<string> {
 
   private formatToOnly2Dots(value: string): string {
     return value.slice(0, value.length - 2) + "." + value.slice(value.length - 2)
-  }
-
-  private removeNonDigitValues(value: string): string {
-    return value ? value.replace(/[^\d]/g, '').trim() : value
   }
 }

@@ -2,6 +2,7 @@ import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core"
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
 import {percentualPatternConfig, percentualPlaceholder} from "../constants";
+import {removeNonDigitValues} from "../utils";
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -18,7 +19,7 @@ const vanillaMasker = require('vanilla-masker');
   }]
 })
 export class PercentualComponent extends ValueAccessorBase<string> {
-  pattern: string;
+  pattern: any = percentualPatternConfig;
 
   @Input() placeholder: string = percentualPlaceholder;
   @Input() oneDotOnly: boolean = false;
@@ -27,7 +28,7 @@ export class PercentualComponent extends ValueAccessorBase<string> {
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   transform(value: string): string {
-    let cleanValue = this.removeNonDigitValues(vanillaMasker.toMoney(value, percentualPatternConfig));
+    let cleanValue = removeNonDigitValues(vanillaMasker.toMoney(value, percentualPatternConfig));
     let valueLenght = cleanValue.length;
 
     return cleanValue.slice(0, valueLenght - 1) + '.' + cleanValue.slice(valueLenght - 1, valueLenght);
@@ -35,9 +36,5 @@ export class PercentualComponent extends ValueAccessorBase<string> {
 
   public blurEvt(event): void {
     this.blur.emit(event);
-  }
-
-  private removeNonDigitValues(value: string): string {
-    return value ? value.replace(/[^\d]/g, '').trim() : value
   }
 }
