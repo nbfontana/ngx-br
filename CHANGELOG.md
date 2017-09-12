@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/nbfontana/ngx-br/compare/v0.1.1...v0.2.0) (2017-09-12)
+
+
+### Features
+
+* dinheiro e percentual utilizando ng2-currency-mask ([42ebf7a](https://github.com/nbfontana/ngx-br/commit/42ebf7a))
+* peso component ([d1e33db](https://github.com/nbfontana/ngx-br/commit/d1e33db))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/nbfontana/ngx-br/compare/v0.1.0...v0.1.1) (2017-09-12)
 
