@@ -1,7 +1,7 @@
 import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
-import {dinheiroPatternConfig, dinheiroPlaceholder} from "../constants";
+import {dinheiroPlaceholder} from "../constants";
 
 @Component({
   selector: 'dinheiro',
@@ -36,7 +36,7 @@ export class DinheiroComponent extends ValueAccessorBase<string> {
     this.blur.emit(event);
   }
 
-  transform(T: any): string {
-    throw new Error("Method not implemented.");
+  transform(value: string): string {
+    return value;
   }
 }

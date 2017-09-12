@@ -37,7 +37,7 @@ export class PercentualComponent extends ValueAccessorBase<string> {
     this.blur.emit(event);
   }
 
-  transform(T: any): string {
-    throw new Error("Method not implemented.");
+  transform(value: string): string {
+    return value;
   }
 }
