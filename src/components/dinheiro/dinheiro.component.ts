@@ -6,7 +6,9 @@ import {dinheiroPatternConfig, dinheiroPlaceholder} from "../constants";
 @Component({
   selector: 'dinheiro',
   template: `
-    <input class="form-control" type="text" maxlength="20" currencyMask
+    <input class="form-control" 
+           maxlength="20" 
+           currencyMask
            id="{{id}}"
            disabled="{{disabled}}"
            [placeholder]="placeholder"

@@ -24,6 +24,7 @@ import {DinheiroPipe} from "./pipes/dinheiro.pipe";
 import {PercentualComponent} from "./components/percentual/percentual.component";
 import {PercentualMaskDirective} from "./components/percentual/percentual.mask.directive";
 import {CurrencyMaskModule} from "ng2-currency-mask";
+import {PesoComponent} from "./components/peso/peso.component";
 
 export {NgxBrValidators} from "./ngx-br-validators";
 
@@ -45,6 +46,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
     HoraComponent,
     DinheiroComponent,
     PercentualComponent,
+    PesoComponent,
 
     //Pipes
     CpfPipe,
@@ -74,6 +76,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
     HoraComponent,
     DinheiroComponent,
     PercentualComponent,
+    PesoComponent,
 
     //Pipes
     CnpjPipe,
