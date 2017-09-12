@@ -113,9 +113,10 @@
   "dependencies": {
     "@types/node": "^7.0.43",
     "chai": "^4.1.2",
-    "cpf_cnpj": "^0.2.0",
     "karma": "^1.7.1",
+    "cpf_cnpj": "0.2.0",
+    "ng2-currency-mask": "4.3.4",
     "ngx-utilities": "0.0.25",
-    "vanilla-masker": "^1.2.0"
+    "vanilla-masker": "1.2.0"
   }
 }

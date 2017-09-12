@@ -49,7 +49,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
                     (ngModelChange)="change($event)"></hora>
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-md-4">
               <dinheiro [(ngModel)]="model.dinheiro" formControlName="dinheiro"></dinheiro>
@@ -61,7 +61,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
               {{1.23 | dinheiro}}
             </div>
           </div>
-          
+
           <div class="row">
             <div class="col-md-3">
               <percentual [(ngModel)]="model.percentual" formControlName="percentual"></percentual>
@@ -106,6 +106,11 @@ export class DemoComponent {
       this.model.dinheiro = 150.78;
       this.model.percentual = 15.9;
     }, 1000)
+
+    setTimeout(() => {
+      this.model.dinheiro = 0;
+      this.model.percentual = 0;
+    }, 4000);
   }
 
   public change(value: any) {

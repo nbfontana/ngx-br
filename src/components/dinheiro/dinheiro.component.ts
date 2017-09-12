@@ -2,18 +2,19 @@ import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core"
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
 import {dinheiroPatternConfig, dinheiroPlaceholder} from "../constants";
-import {removeNonDigitValues} from "../utils";
-
-const vanillaMasker = require('vanilla-masker');
 
 @Component({
   selector: 'dinheiro',
   template: `
-    <input class="form-control" type="text" maxlength="20" id="{{id}}"
-           disabled="{{disabled}}" dinheiroMask
+    <input class="form-control" type="text" maxlength="20" currencyMask
+           id="{{id}}"
+           disabled="{{disabled}}"
            [placeholder]="placeholder"
            [(ngModel)]="value"
-           (ngModelChange)="notifyChanges($event)">`,
+           (ngModelChange)="notifyChanges($event)"
+           (blur)="blurEvt()"
+           [ngStyle]="style"
+           [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: false }">`,
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => DinheiroComponent),
@@ -21,31 +22,19 @@ const vanillaMasker = require('vanilla-masker');
   }]
 })
 export class DinheiroComponent extends ValueAccessorBase<string> {
-  pattern: any = dinheiroPatternConfig;
+  pattern: string;
 
+  @Input() style: any;
   @Input() placeholder: string = dinheiroPlaceholder;
-  @Input() oneDotOnly: boolean = true;
   @Input() id: string;
 
   @Output() blur: EventEmitter<any> = new EventEmitter();
-
-  transform(value: string): string {
-    let transformedValue = removeNonDigitValues(value);
-    transformedValue = vanillaMasker.toMoney(transformedValue);
-    transformedValue = removeNonDigitValues(transformedValue);
-
-    if (this.oneDotOnly) {
-      return this.formatToOnly2Dots(transformedValue);
-    }
-
-    return vanillaMasker.toMoney(transformedValue);
-  }
 
   public blurEvt(event): void {
     this.blur.emit(event);
   }
 
-  private formatToOnly2Dots(value: string): string {
-    return value.slice(0, value.length - 2) + "." + value.slice(value.length - 2)
+  transform(T: any): string {
+    throw new Error("Method not implemented.");
   }
 }

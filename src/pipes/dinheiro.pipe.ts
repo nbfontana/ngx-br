@@ -1,5 +1,4 @@
 import {Pipe, PipeTransform} from "@angular/core";
-import {dinheiroPatternConfig} from "../components/constants";
 
 const vanillaMasker = require('vanilla-masker');
 
