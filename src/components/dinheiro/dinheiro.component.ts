@@ -1,7 +1,7 @@
 import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
-import {dinheiroPlaceholder} from "../constants";
+import {dinheiroPatternConfig, dinheiroPlaceholder} from "../constants";
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -20,7 +20,7 @@ const vanillaMasker = require('vanilla-masker');
   }]
 })
 export class DinheiroComponent extends ValueAccessorBase<string> {
-  pattern: string;
+  pattern: any = dinheiroPatternConfig;
 
   @Input() placeholder: string = dinheiroPlaceholder;
   @Input() oneDotOnly: boolean = true;

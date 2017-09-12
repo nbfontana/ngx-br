@@ -11,7 +11,7 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
   public onTouched: any = () => {};
 
   abstract transform(T): T;
-  abstract pattern: string;
+  abstract pattern: any;
 
   private innerValue: T;
 
@@ -29,8 +29,20 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
     if (!this.pattern) {
       this.innerValue = value;
     } else {
-      this.innerValue = value ? vanillaMasker.toPattern(value, this.pattern) : value;
+      this.innerValue = this.applyPattern(value);
     }
+  }
+
+  private applyPattern(value: T) {
+    if (!value) {
+      return '';
+    }
+
+    if (typeof this.pattern === "string") {
+      return vanillaMasker.toPattern(value, this.pattern);
+    }
+
+    return vanillaMasker.toMoney(value, this.pattern);
   }
 
   registerOnChange(fn: any): void {
