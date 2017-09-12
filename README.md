@@ -1,6 +1,5 @@
 # ngx br
 [![Build Status](https://travis-ci.org/nbfontana/ngx-br.svg?branch=master)](https://travis-ci.org/nbfontana/ngx-br)
-[![codecov](https://codecov.io/gh/nbfontana/ngx-br/branch/master/graph/badge.svg)](https://codecov.io/gh/nbfontana/ngx-br)
 [![npm version](https://badge.fury.io/js/ngx-br.svg)](http://badge.fury.io/js/ngx-br)
 [![devDependency Status](https://david-dm.org/nbfontana/ngx-br/dev-status.svg)](https://david-dm.org/nbfontana/ngx-br?type=dev)
 [![GitHub issues](https://img.shields.io/github/issues/nbfontana/ngx-br.svg)](https://github.com/nbfontana/ngx-br/issues)
