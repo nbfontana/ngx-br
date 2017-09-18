@@ -11,7 +11,7 @@ import {pesoPlaceholder} from "../constants";
            currencyMask
            maxlength="{{maxLength}}"
            id="{{id}}"
-           (blur)="blurEvt()"
+           (blur)="blurEvt($event)"
            [disabled]="disabled"
            [placeholder]="placeholder"
            [(ngModel)]="value"
