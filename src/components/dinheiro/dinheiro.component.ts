@@ -14,7 +14,7 @@ import {dinheiroPlaceholder} from "../constants";
            [placeholder]="placeholder"
            [(ngModel)]="value"
            (ngModelChange)="notifyChanges($event)"
-           (blur)="blurEvt()"
+           (blur)="blurEvt($event)"
            [ngStyle]="style"
            [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: false }">`,
   providers: [{

@@ -7,7 +7,7 @@ import {pesoPlaceholder} from "../constants";
   selector: 'peso',
   template: `
     <input class="form-control"
-           placeholder="Kg 0,00"
+           placeholder="{{placeholder}}"
            currencyMask
            maxlength="{{maxLength}}"
            id="{{id}}"
