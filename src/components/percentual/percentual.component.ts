@@ -27,7 +27,7 @@ export class PercentualComponent extends ValueAccessorBase<string> {
   pattern: string;
 
   @Input() style: any;
-  @Input() maxLength: number = 11;
+  @Input() maxLength: number = 10;
   @Input() placeholder: string = percentualPlaceholder;
   @Input() id: string;
 
