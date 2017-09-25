@@ -1,7 +1,7 @@
 import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
-import {cepPattern} from "../constants";
+import {cepPattern, cepPlaceholder} from "../constants";
 
 @Component({
   selector: 'cep',
@@ -22,7 +22,7 @@ export class CepComponent extends ValueAccessorBase<string> {
   public pattern: string = cepPattern;
 
   @Input() id: string;
-  @Input() placeholder: string;
+  @Input() placeholder: string = cepPlaceholder;
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
   transform(value: string): string {

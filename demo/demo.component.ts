@@ -64,43 +64,106 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
             </div>
           </div>
 
+
           <div class="row">
-            <div class="col-md-4 form-group">
-              <label>UF</label>
-              <estados [(ngModel)]="model.estado" [ngModelOptions]="{standalone: true}" [placeholder]="'Escolhe aí'">
-              </estados>
+            <div class="col-md-12 form-group">
+              <h3>UF Component</h3>
+              <p>Select input with all Brazilian UF's.</p>
             </div>
-            <div class="col-md-4 form-group">
-              <label>Cep</label>
+          </div>
+          <div class="row example-box">
+            <div class="col-md-6 form-group">
+              <label>EXAMPLE</label>
+              <estados [(ngModel)]="model.estado" formControlName="estado" [placeholder]="'Escolhe aí'"></estados>
+            </div>
+            <div class="col-md-6">
+              <label>DISABLED</label>
+              <estados [(ngModel)]="model.estado" formControlName="estado" [disabled]="true"></estados>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <h3>CEP Component</h3>
+              <p>Text input with a Cep mask.</p>
+            </div>
+          </div>
+          <div class="row example-box">
+            <div class="col-md-6 form-group">
+              <label>EXAMPLE</label>
               <cep [(ngModel)]="model.cep" formControlName="cep"></cep>
             </div>
-            <div class="col-md-4 form-group">
-              <label>Hora</label>
-              <hora [disabled]="true" [(ngModel)]="model.hora" formControlName="hora"></hora>
+            <div class="col-md-6">
+              <label>DISABLED</label>
+              <cep [disabled]="true"></cep>
             </div>
           </div>
+
           <div class="row">
-            <div class="col-md-4">
-              <dinheiro [(ngModel)]="model.dinheiro" formControlName="dinheiro"></dinheiro>
-              <span *ngIf="form.get('dinheiro').hasError('dinheiroRequired')">Required</span>
-            </div>
-            <div class="col-md-2">
-              {{10.6 | dinheiro}}
-              {{10.5 | dinheiro}}
-              {{1.23 | dinheiro}}
+            <div class="col-md-12 form-group">
+              <h3>HORA Component</h3>
+              <p>Text input with a Hour mask.</p>
             </div>
           </div>
-          <div class="row">
+          <div class="row example-box">
+            <div class="col-md-3 form-group">
+              <label>EXAMPLE</label>
+              <hora [(ngModel)]="model.hora" formControlName="hora"></hora>
+            </div>
             <div class="col-md-3">
+              <label>DISABLED</label>
+              <hora [disabled]="true"></hora>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <h3>DINHEIRO Component</h3>
+              <p>Text input with a Money mask.</p>
+            </div>
+          </div>
+          <div class="row example-box">
+            <div class="col-md-4 form-group">
+              <label>EXAMPLE</label>
+              <dinheiro [(ngModel)]="model.dinheiro" formControlName="dinheiro"></dinheiro>
+            </div>
+            <div class="col-md-3">
+              <label>DISABLED</label>
+              <dinheiro [disabled]="true"></dinheiro>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <h3>PERCENTUAL Component</h3>
+              <p>Text input with a Percent mask.</p>
+            </div>
+          </div>
+          <div class="row example-box">
+            <div class="col-md-4 form-group">
+              <label>EXAMPLE</label>
               <percentual [(ngModel)]="model.percentual" formControlName="percentual"></percentual>
             </div>
             <div class="col-md-3">
-              {{form.get('percentual').hasError('percentualRequired')}}
+              <label>DISABLED</label>
+              <percentual [disabled]="true"></percentual>
             </div>
           </div>
+
           <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-12 form-group">
+              <h3>PESO Component</h3>
+              <p>Text input with a Weight mask.</p>
+            </div>
+          </div>
+          <div class="row example-box">
+            <div class="col-md-4 form-group">
+              <label>EXAMPLE</label>
               <peso [(ngModel)]="model.peso" [ngModelOptions]="{standalone: true}"></peso>
+            </div>
+            <div class="col-md-3">
+              <label>DISABLED</label>
+              <peso [disabled]="true"></peso>
             </div>
           </div>
         </div>
