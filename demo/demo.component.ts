@@ -48,11 +48,23 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
           </div>
 
           <div class="row">
-            <div class="col-md-4 form-group">
-              <label>Telefone</label>
-              <telefone [(ngModel)]="model.telefone" formControlName="telefone"
-                        [placeholder]="'(48) 9 9999-9999'"></telefone>
+            <div class="col-md-12 form-group">
+              <h3>TELEFONE Component</h3>
+              <p>Text input with a Phone mask.</p>
             </div>
+          </div>
+          <div class="row example-box">
+            <div class="col-md-6 form-group">
+              <label>EXAMPLE</label>
+              <telefone [(ngModel)]="model.telefone" formControlName="telefone"></telefone>
+            </div>
+            <div class="col-md-6">
+              <label>DISABLED</label>
+              <telefone [disabled]="true"></telefone>
+            </div>
+          </div>
+
+          <div class="row">
             <div class="col-md-4 form-group">
               <label>UF</label>
               <estados [(ngModel)]="model.estado" [ngModelOptions]="{standalone: true}" [placeholder]="'Escolhe aí'">
@@ -95,8 +107,9 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
 
         <div class="col-md-5 form-group">
           <div class="affix">
-            <p>Data:</p>
-            <pre>{{ form.value | json }}</pre>
+            <h3>Form</h3>
+            <p style="margin-bottom: 22px">All data as json value</p>
+            <pre style="width: 100%">{{ form.value | json }}</pre>
           </div>
         </div>
       </div>
@@ -149,7 +162,7 @@ export class DemoComponent {
       this.model.estado = "SC";
       this.model.hora = "22:22";
       this.model.cep = "88715000";
-      this.model.telefone = "48999999999";
+      this.model.telefone = 48999999999;
       this.model.cnpj = 98798798;
       this.model.dinheiro = 150.78;
       this.model.percentual = 15.9;
@@ -172,7 +185,7 @@ class DemoModel {
   estado: string;
   hora: string;
   cep: string;
-  telefone: string;
+  telefone: number;
   dinheiro: number;
   percentual: number;
   peso: number;
