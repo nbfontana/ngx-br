@@ -76,4 +76,4 @@ Run `npm test` to run tests once or `npm run test:watch` to continually run test
 
 ## License
 
-MIT
+MIT @ Neri Bez Fontana
