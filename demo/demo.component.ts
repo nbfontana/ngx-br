@@ -67,7 +67,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
 
           <div class="row">
             <div class="col-md-12 form-group">
-              <h3>UF Component</h3>
+              <h3>ESTADO Component</h3>
               <p>Select input with all Brazilian UF's.</p>
             </div>
           </div>
