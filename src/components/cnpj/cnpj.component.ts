@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
-import {cnpjPattern} from "../constants";
+import {cnpjPattern, cnpjPlaceholder} from "../constants";
 
 @Component({
   selector: 'cnpj',
@@ -21,7 +21,7 @@ import {cnpjPattern} from "../constants";
 export class CnpjComponent extends ValueAccessorBase<string> {
   public pattern: string = cnpjPattern;
 
-  @Input() placeholder: string;
+  @Input() placeholder: string = cnpjPlaceholder;
   @Input() id: string;
 
   @Output() blur: EventEmitter<any> = new EventEmitter();

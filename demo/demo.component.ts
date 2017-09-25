@@ -29,12 +29,25 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
           </div>
 
           <div class="row">
-            <div class="col-md-4 form-group">
-              <label>CNPJ</label>
+            <div class="col-md-12 form-group">
+              <h3>CNPJ Component</h3>
+              <p>Text input with a CNPJ mask.</p>
+            </div>
+          </div>
+          <div class="row example-box">
+            <div class="col-md-6 form-group">
+              <label>EXAMPLE</label>
               <cnpj-container [control]="form.get('cnpj')">
-                <cnpj [(ngModel)]="model.cnpj" formControlName="cnpj" [placeholder]="'00.000.000/0000-00'"></cnpj>
+                <cnpj [(ngModel)]="model.cnpj" formControlName="cnpj"></cnpj>
               </cnpj-container>
             </div>
+            <div class="col-md-6">
+              <label>DISABLED</label>
+              <cnpj [(ngModel)]="model.cnpjDisabled" formControlName="cnpjDisabled"></cnpj>
+            </div>
+          </div>
+
+          <div class="row">
             <div class="col-md-4 form-group">
               <label>Telefone</label>
               <telefone [(ngModel)]="model.telefone" formControlName="telefone"
@@ -113,8 +126,9 @@ export class DemoComponent {
   private buildForm() {
     this.form = this.formBuilder.group({
       cpf: [null, NgxBrValidators.cpf()],
-      cpfDisabled: [null],
       cnpj: [null, NgxBrValidators.cnpj()],
+      cpfDisabled: [null],
+      cnpjDisabled: [null],
       telefone: [null],
       cep: [null],
       percentual: [null, NgxBrValidators.percentualRequired()],
@@ -127,6 +141,8 @@ export class DemoComponent {
   private updateValues() {
     this.form.get('cpfDisabled').setValue(12345678900);
     this.form.get('cpfDisabled').disable();
+    this.form.get('cnpjDisabled').setValue(12345678900);
+    this.form.get('cnpjDisabled').disable();
 
     setTimeout(() => {
       this.form.get('cpf').setValue("08754248990");
@@ -134,7 +150,7 @@ export class DemoComponent {
       this.model.hora = "22:22";
       this.model.cep = "88715000";
       this.model.telefone = "48999999999";
-      this.model.cnpj = "98798798";
+      this.model.cnpj = 98798798;
       this.model.dinheiro = 150.78;
       this.model.percentual = 15.9;
       this.model.peso = 30.69;
@@ -151,11 +167,12 @@ export class DemoComponent {
 class DemoModel {
   cpf: number;
   cpfDisabled: number;
+  cnpj: number;
+  cnpjDisabled: number;
   estado: string;
   hora: string;
   cep: string;
   telefone: string;
-  cnpj: string;
   dinheiro: number;
   percentual: number;
   peso: number;
