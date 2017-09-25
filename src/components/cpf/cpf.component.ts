@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
-import {cpfPattern} from "../constants";
+import {cpfPattern, cpfPlaceholder} from "../constants";
 
 @Component({
   selector: 'cpf',
@@ -21,7 +21,7 @@ import {cpfPattern} from "../constants";
 export class CpfComponent extends ValueAccessorBase<string> {
   public pattern: string = cpfPattern;
 
-  @Input() placeholder: string;
+  @Input() placeholder: string = cpfPlaceholder;
   @Input() id: string;
 
   @Output() blur: EventEmitter<any> = new EventEmitter();
