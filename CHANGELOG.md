@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.5"></a>
+## [0.2.5](https://github.com/nbfontana/ngx-br/compare/v0.2.4...v0.2.5) (2017-09-29)
+
+
+### Bug Fixes
+
+* changed to ngx-currency to fix ctrl+a and arrow navigation in dinheiro component ([671e46b](https://github.com/nbfontana/ngx-br/commit/671e46b))
+* typo in docs ([a324fa9](https://github.com/nbfontana/ngx-br/commit/a324fa9))
+
+
+
 <a name="0.2.4"></a>
 ## [0.2.4](https://github.com/nbfontana/ngx-br/compare/v0.2.3...v0.2.4) (2017-09-21)
 
