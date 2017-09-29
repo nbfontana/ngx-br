@@ -1,4 +1,4 @@
-import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
+import {Component, ElementRef, EventEmitter, forwardRef, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
 import {dinheiroPlaceholder} from "../constants";
@@ -6,10 +6,10 @@ import {dinheiroPlaceholder} from "../constants";
 @Component({
   selector: 'dinheiro',
   template: `
-    <input class="form-control" 
-           maxlength="20" 
+    <input class="form-control"
+           maxlength="20"
            currencyMask
-           id="{{id}}"
+           id="{{id}}" (keydown)="onKeydown($event)"
            disabled="{{disabled}}"
            [placeholder]="placeholder"
            [(ngModel)]="value"
@@ -32,11 +32,21 @@ export class DinheiroComponent extends ValueAccessorBase<string> {
 
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
+  constructor(private elementRef: ElementRef) {
+    super();
+  }
+
   public blurEvt(event): void {
     this.blur.emit(event);
   }
 
   transform(value: string): string {
     return value;
+  }
+
+  onKeydown(event) {
+    if (event.ctrlKey && event.keyCode === 65) {
+      console.log(this.elementRef);
+    }
   }
 }

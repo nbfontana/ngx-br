@@ -20,7 +20,6 @@ import {ValidacaoCnpjComponent} from "./components/cnpj/cnpj.component.container
 import {TelefonePipe} from "./pipes/telefone.pipe";
 import {DinheiroMaskDirective} from "./components/dinheiro/dinheiro.mask.directive";
 import {DinheiroComponent} from "./components/dinheiro/dinheiro.component";
-import {DinheiroPipe} from "./pipes/dinheiro.pipe";
 import {PercentualComponent} from "./components/percentual/percentual.component";
 import {PercentualMaskDirective} from "./components/percentual/percentual.mask.directive";
 import {CurrencyMaskModule} from "ng2-currency-mask";
@@ -53,7 +52,6 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CnpjPipe,
     CpfCnpjPipe,
     TelefonePipe,
-    DinheiroPipe,
 
     //Directives
     CpfMaskDirective,
@@ -83,7 +81,6 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CpfPipe,
     CpfCnpjPipe,
     TelefonePipe,
-    DinheiroPipe,
 
     //Directives
     CpfMaskDirective,
@@ -91,7 +88,6 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CepMaskDirective,
     TelefoneMaskDirective,
     HoraMaskDirective,
-    DinheiroMaskDirective,
     PercentualMaskDirective,
 
     //Modules
@@ -101,8 +97,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
     CnpjPipe,
     CpfPipe,
     CpfCnpjPipe,
-    TelefonePipe,
-    DinheiroPipe
+    TelefonePipe
   ]
 })
 export class NgxBrModule {
