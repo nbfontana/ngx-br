@@ -22,8 +22,8 @@ import {DinheiroMaskDirective} from "./components/dinheiro/dinheiro.mask.directi
 import {DinheiroComponent} from "./components/dinheiro/dinheiro.component";
 import {PercentualComponent} from "./components/percentual/percentual.component";
 import {PercentualMaskDirective} from "./components/percentual/percentual.mask.directive";
-import {CurrencyMaskModule} from "ng2-currency-mask";
 import {PesoComponent} from "./components/peso/peso.component";
+import {NgxCurrencyModule} from "ngx-currency";
 
 export {NgxBrValidators} from "./ngx-br-validators";
 
@@ -31,7 +31,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
   imports: [
     CommonModule,
     FormsModule,
-    CurrencyMaskModule
+    NgxCurrencyModule
   ],
   declarations: [
     // Components
@@ -91,7 +91,7 @@ export {NgxBrValidators} from "./ngx-br-validators";
     PercentualMaskDirective,
 
     //Modules
-    CurrencyMaskModule
+    NgxCurrencyModule
   ],
   providers: [
     CnpjPipe,
