@@ -42,6 +42,10 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
       return vanillaMasker.toPattern(value, this.pattern);
     }
 
+    if (typeof this.pattern === "function") {
+      return vanillaMasker.toPattern(value, this.pattern(value));
+    }
+
     return vanillaMasker.toMoney(value, this.pattern);
   }
 

@@ -51,6 +51,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
             <div class="col-md-12 form-group">
               <h3>TELEFONE Component</h3>
               <p>Text input with a Phone mask.</p>
+              <p><strong>Pipe: </strong>{{model.telefone | telefone}}</p>
             </div>
           </div>
           <div class="row example-box">
@@ -221,12 +222,12 @@ export class DemoComponent {
     this.form.get('cnpjDisabled').disable();
 
     setTimeout(() => {
-      this.form.get('cpf').setValue("08754248990");
+      this.form.get('cpf').setValue("07987698903");
       this.model.estado = "SC";
       this.model.hora = "22:22";
       this.model.cep = "88715000";
-      this.model.telefone = 48999999999;
-      this.model.cnpj = 98798798;
+      this.model.telefone = 12345678910;
+      this.model.cnpj = 83711511000149;
       this.model.dinheiro = 150.78;
       this.model.percentual = 15.9;
       this.model.peso = 30.69;
