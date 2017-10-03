@@ -7,7 +7,7 @@ import {dinheiroPlaceholder} from "../constants";
   selector: 'dinheiro',
   template: `
     <input class="form-control"
-           maxlength="20"
+           maxlength="{{maxLength}}"
            currencyMask
            id="{{id}}" (keydown)="onKeydown($event)"
            disabled="{{disabled}}"
@@ -29,6 +29,7 @@ export class DinheiroComponent extends ValueAccessorBase<string> {
   @Input() style: any;
   @Input() placeholder: string = dinheiroPlaceholder;
   @Input() id: string;
+  @Input() maxLength: number = 15;
 
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
