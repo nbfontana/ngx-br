@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from "@angular/core";
-import {telefonePattern} from "../components/constants";
+import {telefoneFixoPattern, telefoneCelularPattern} from "../components/constants";
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -11,7 +11,7 @@ export class TelefonePipe implements PipeTransform {
     if (!value) {
       return '';
     }
-
+    let telefonePattern: string = value.toString().length === 11 ? telefoneCelularPattern : telefoneFixoPattern;
     return vanillaMasker.toPattern(value, telefonePattern);
   }
 }

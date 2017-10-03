@@ -1,7 +1,7 @@
 import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
-import {telefonePattern} from "../constants";
+import {telefoneCelularPattern, telefoneFixoPattern} from "../constants";
 
 @Component({
   selector: 'telefone',
@@ -18,9 +18,11 @@ import {telefonePattern} from "../constants";
   }]
 })
 export class TelefoneComponent extends ValueAccessorBase<string> {
-  public pattern: string = telefonePattern;
+  public pattern = (value: any) : string => {
+    return value.toString().length === 11 ? telefoneCelularPattern : telefoneFixoPattern;
+  };
 
-  @Input() placeholder: string = telefonePattern;
+  @Input() placeholder: string = telefoneFixoPattern;
   @Input() id: string;
 
   @Output() blur: EventEmitter<any> = new EventEmitter();
