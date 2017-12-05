@@ -1,10 +1,10 @@
-import {Directive, ElementRef} from "@angular/core";
-import {percentualPatternConfig} from "../constants";
+import { Directive, ElementRef } from '@angular/core';
+import { percentualPatternConfig } from '../constants';
 
 const vanillaMasker = require('vanilla-masker');
 
 @Directive({
-  selector: '[percentualMask]'
+  selector: '[percentualMask]',
 })
 export class PercentualMaskDirective {
   public nativeElement: HTMLInputElement;

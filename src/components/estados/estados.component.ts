@@ -1,7 +1,7 @@
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import {Component, forwardRef, Input} from "@angular/core";
-import {Estado} from "./estado";
-import {ValueAccessorBase} from "../value-acessor-base";
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Component, forwardRef, Input } from '@angular/core';
+import { Estado } from './estado';
+import { ValueAccessorBase } from '../value-acessor-base';
 
 @Component({
   selector: 'estados',
@@ -13,8 +13,8 @@ import {ValueAccessorBase} from "../value-acessor-base";
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => EstadosComponent),
-    multi: true
-  }]
+    multi: true,
+  }],
 })
 export class EstadosComponent extends ValueAccessorBase<Estado> {
 

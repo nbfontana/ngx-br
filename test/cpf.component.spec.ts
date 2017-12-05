@@ -1,5 +1,5 @@
-import {fakeAsync} from "@angular/core/testing";
-import {expect} from "chai";
+import { fakeAsync } from '@angular/core/testing';
+import { expect } from 'chai';
 
 describe('***** Testes CPF *****', () => {
 

@@ -1,7 +1,7 @@
-import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import {ValueAccessorBase} from "../value-acessor-base";
-import {percentualPlaceholder} from "../constants";
+import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ValueAccessorBase } from '../value-acessor-base';
+import { percentualPlaceholder } from '../constants';
 
 @Component({
   selector: 'percentual',
@@ -20,8 +20,8 @@ import {percentualPlaceholder} from "../constants";
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => PercentualComponent),
-    multi: true
-  }]
+    multi: true,
+  }],
 })
 export class PercentualComponent extends ValueAccessorBase<string> {
   pattern: string;

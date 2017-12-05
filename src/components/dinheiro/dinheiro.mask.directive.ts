@@ -1,10 +1,10 @@
-import {Directive, ElementRef} from "@angular/core";
-import {dinheiroPatternConfig} from "../constants";
+import { Directive, ElementRef } from '@angular/core';
+import { dinheiroPatternConfig } from '../constants';
 
 const vanillaMasker = require('vanilla-masker');
 
 @Directive({
-  selector: '[dinheiroMask]'
+  selector: '[dinheiroMask]',
 })
 export class DinheiroMaskDirective {
   public nativeElement: HTMLInputElement;

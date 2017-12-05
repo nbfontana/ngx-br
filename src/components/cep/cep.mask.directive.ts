@@ -1,10 +1,10 @@
-import {Directive, ElementRef} from "@angular/core";
-import {cepPattern} from "../constants";
+import { Directive, ElementRef } from '@angular/core';
+import { cepPattern } from '../constants';
 
 const vanillaMasker = require('vanilla-masker');
 
 @Directive({
-  selector: '[cepMask]'
+  selector: '[cepMask]',
 })
 export class CepMaskDirective {
   public nativeElement: HTMLInputElement;

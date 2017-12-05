@@ -1,10 +1,10 @@
-import {Directive, ElementRef} from "@angular/core";
-import {cnpjPattern} from "../constants";
+import { Directive, ElementRef } from '@angular/core';
+import { cnpjPattern } from '../constants';
 
 const vanillaMasker = require('vanilla-masker');
 
 @Directive({
-  selector: '[cnpjMask]'
+  selector: '[cnpjMask]',
 })
 export class CnpjMaskDirective {
   public nativeElement: HTMLInputElement;

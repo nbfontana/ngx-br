@@ -2,8 +2,8 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgxBrModule} from '../src';
 import {DemoComponent} from './demo.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {CommonModule} from "@angular/common";
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [DemoComponent],
@@ -12,9 +12,9 @@ import {CommonModule} from "@angular/common";
     FormsModule,
     ReactiveFormsModule,
     BrowserModule,
-    NgxBrModule.forRoot()
+    NgxBrModule.forRoot(),
   ],
-  bootstrap: [DemoComponent]
+  bootstrap: [DemoComponent],
 })
 export class DemoModule {
 }

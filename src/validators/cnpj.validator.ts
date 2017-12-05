@@ -1,17 +1,17 @@
-import {AbstractControl, ValidatorFn} from "@angular/forms";
+import { AbstractControl, ValidatorFn } from '@angular/forms';
 
-const CNPJ = require("cpf_cnpj").CNPJ;
+const CNPJ = require('cpf_cnpj').CNPJ;
 
 export function cnpjValidationFn(): ValidatorFn {
   return (control: AbstractControl) => {
-    let value = control.value;
+    const value = control.value;
 
     if (value && !CNPJ.isValid(value)) {
       return {
-        cnpj: true
+        cnpj: true,
       };
     }
 
     return null;
-  }
+  };
 }

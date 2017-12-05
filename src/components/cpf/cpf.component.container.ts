@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {FormControl} from "@angular/forms";
+import { Component, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'cpf-container',
@@ -9,7 +9,7 @@ import {FormControl} from "@angular/forms";
       <span *ngIf="control.hasError('required')">{{requiredMsg}}</span>
       <span *ngIf="!control.hasError('required') && control.hasError('cpf')">{{cpfMsg}}</span>
     </span>
-  `
+  `,
 })
 export class ValidacaoCpfComponent {
 

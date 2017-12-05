@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from "@angular/forms";
-import {NgxBrValidators} from "../src/ngx-br-validators";
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {NgxBrValidators} from '../src/ngx-br-validators';
 
 @Component({
   selector: 'br-demo-app',
@@ -188,7 +188,7 @@ import {NgxBrValidators} from "../src/ngx-br-validators";
     .example-box > div > label {
       color: #b3b3b3;
     }
-  `]
+  `],
 })
 export class DemoComponent {
 
@@ -211,7 +211,7 @@ export class DemoComponent {
       percentual: [null, NgxBrValidators.percentualRequired()],
       estado: [null],
       dinheiro: [null, NgxBrValidators.dinheiroRequired()],
-      hora: [null, NgxBrValidators.hora()]
+      hora: [null, NgxBrValidators.hora()],
     });
   }
 
@@ -222,22 +222,22 @@ export class DemoComponent {
     this.form.get('cnpjDisabled').disable();
 
     setTimeout(() => {
-      this.form.get('cpf').setValue("07987698903");
-      this.model.estado = "SC";
-      this.model.hora = "22:22";
-      this.model.cep = "88715000";
+      this.form.get('cpf').setValue('07987698903');
+      this.model.estado = 'SC';
+      this.model.hora = '22:22';
+      this.model.cep = '88715000';
       this.model.telefone = 12345678910;
       this.model.cnpj = 83711511000149;
       this.model.dinheiro = 150.78;
       this.model.percentual = 15.9;
       this.model.peso = 30.69;
-    }, 1000);
+    },         1000);
 
     setTimeout(() => {
       this.model.dinheiro = 0;
       this.model.percentual = 0;
       this.model.peso = 0;
-    }, 4000);
+    },         4000);
   }
 }
 

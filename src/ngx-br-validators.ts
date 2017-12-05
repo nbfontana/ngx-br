@@ -1,9 +1,9 @@
-import {cnpjValidationFn} from "./validators/cnpj.validator";
-import {cpfValidationFn} from "./validators/cpf.validator";
-import {horaValidationFn} from "./validators/hora.validator";
-import {ValidatorFn} from "@angular/forms";
-import {dinheiroValidationFn} from "./validators/dinheiro.required.validator";
-import {percentualValidationFn} from "./validators/percentual.required.validator";
+import { cnpjValidationFn } from './validators/cnpj.validator';
+import { cpfValidationFn } from './validators/cpf.validator';
+import { horaValidationFn } from './validators/hora.validator';
+import { ValidatorFn } from '@angular/forms';
+import { dinheiroValidationFn } from './validators/dinheiro.required.validator';
+import { percentualValidationFn } from './validators/percentual.required.validator';
 
 /**
  * Provides a set of Brazilian validators used by form controls.

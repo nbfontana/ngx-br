@@ -1,10 +1,10 @@
-import {Pipe, PipeTransform} from "@angular/core";
-import {cpfPattern} from "../components/constants";
+import { Pipe, PipeTransform } from '@angular/core';
+import { cpfPattern } from '../components/constants';
 
 const vanillaMasker = require('vanilla-masker');
 
 @Pipe({
-  name: 'cpf'
+  name: 'cpf',
 })
 export class CpfPipe implements PipeTransform {
   transform(value: any) {

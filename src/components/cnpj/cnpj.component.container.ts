@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {FormControl} from "@angular/forms";
+import { Component, Input } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'cnpj-container',
@@ -9,7 +9,7 @@ import {FormControl} from "@angular/forms";
       <span *ngIf="control.hasError('required')">{{requiredMsg}}</span>
       <span *ngIf="!control.hasError('required') && control.hasError('cnpj')">{{cnpjMsg}}</span>
     </span>
-  `
+  `,
 })
 export class ValidacaoCnpjComponent {
 

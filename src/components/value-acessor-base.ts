@@ -1,5 +1,5 @@
-import {ControlValueAccessor} from "@angular/forms";
-import {Input} from "@angular/core";
+import { ControlValueAccessor } from '@angular/forms';
+import { Input } from '@angular/core';
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -38,11 +38,11 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
       return '';
     }
 
-    if (typeof this.pattern === "string") {
+    if (typeof this.pattern === 'string') {
       return vanillaMasker.toPattern(value, this.pattern);
     }
 
-    if (typeof this.pattern === "function") {
+    if (typeof this.pattern === 'function') {
       return vanillaMasker.toPattern(value, this.pattern(value));
     }
 
@@ -59,7 +59,7 @@ export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
 
   setDisabledState(isDisabled: boolean) {
     this.disabled = isDisabled;
-  };
+  }
 
   touch() {
     this.onTouched.forEach(f => f());

@@ -1,7 +1,7 @@
-import {Component, EventEmitter, Input, Output} from "@angular/core";
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import {ValueAccessorBase} from "../value-acessor-base";
-import {cpfPattern, cpfPlaceholder} from "../constants";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ValueAccessorBase } from '../value-acessor-base';
+import { cpfPattern, cpfPlaceholder } from '../constants';
 
 @Component({
   selector: 'cpf',
@@ -15,7 +15,7 @@ import {cpfPattern, cpfPlaceholder} from "../constants";
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: CpfComponent,
-    multi: true
+    multi: true,
   }],
 })
 export class CpfComponent extends ValueAccessorBase<string> {

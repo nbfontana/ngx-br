@@ -17,7 +17,7 @@ export const dinheiroPatternConfig = {
   separator: ',',
   delimiter: '.',
   unit: 'R$',
-  zeroCents: false
+  zeroCents: false,
 };
 
 export const percentualPatternConfig = {
@@ -25,5 +25,5 @@ export const percentualPatternConfig = {
   separator: ',',
   delimiter: ',',
   suffixUnit: '%',
-  zeroCents: false
+  zeroCents: false,
 };

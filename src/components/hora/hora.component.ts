@@ -1,7 +1,7 @@
-import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import {ValueAccessorBase} from "../value-acessor-base";
-import {horaPattern} from "../constants";
+import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ValueAccessorBase } from '../value-acessor-base';
+import { horaPattern } from '../constants';
 
 const vanillaMasker = require('vanilla-masker');
 
@@ -18,8 +18,8 @@ const vanillaMasker = require('vanilla-masker');
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => HoraComponent),
-    multi: true
-  }]
+    multi: true,
+  }],
 })
 export class HoraComponent extends ValueAccessorBase<string> {
   public pattern: string = horaPattern;

@@ -1,9 +1,9 @@
-import {Directive, ElementRef} from "@angular/core";
-import {cpfPattern} from "../constants";
+import { Directive, ElementRef } from '@angular/core';
+import { cpfPattern } from '../constants';
 
 const vanillaMasker = require('vanilla-masker');
 @Directive({
-  selector: '[cpfMask]'
+  selector: '[cpfMask]',
 })
 export class CpfMaskDirective {
   public nativeElement: HTMLInputElement;

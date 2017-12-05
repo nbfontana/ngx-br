@@ -1,7 +1,7 @@
-import {Component, EventEmitter, forwardRef, Input, Output} from "@angular/core";
-import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import {ValueAccessorBase} from "../value-acessor-base";
-import {pesoPlaceholder} from "../constants";
+import { Component, EventEmitter, forwardRef, Input, Output } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ValueAccessorBase } from '../value-acessor-base';
+import { pesoPlaceholder } from '../constants';
 
 @Component({
   selector: 'peso',
@@ -21,8 +21,8 @@ import {pesoPlaceholder} from "../constants";
   providers: [{
     provide: NG_VALUE_ACCESSOR,
     useExisting: forwardRef(() => PesoComponent),
-    multi: true
-  }]
+    multi: true,
+  }],
 })
 export class PesoComponent extends ValueAccessorBase<string> {
   pattern: string;

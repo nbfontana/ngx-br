@@ -1,10 +1,10 @@
-import {Directive, ElementRef} from "@angular/core";
-import {horaPattern} from "../constants";
+import { Directive, ElementRef } from '@angular/core';
+import { horaPattern } from '../constants';
 
 const vanillaMasker = require('vanilla-masker');
 
 @Directive({
-  selector: '[horaMask]'
+  selector: '[horaMask]',
 })
 export class HoraMaskDirective {
   public nativeElement: HTMLInputElement;
