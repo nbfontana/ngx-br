@@ -1,6 +1,6 @@
-import {Component} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
-import {NgxBrValidators} from '../src/ngx-br-validators';
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { NgxBrValidators } from '../src/ngx-br-validators';
 
 @Component({
   selector: 'br-demo-app',
