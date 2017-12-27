@@ -9,26 +9,26 @@
 ## Demo
 https://nbfontana.github.io/ngx-br/
 
-## Table of contents
+## Índice
 
-- [About](#about)
-- [Installation](#installation)
-- [Documentation](https://nbfontana.github.io/ngx-br/docs/)
-- [Development](#development)
-- [License](#license)
+- [Sobre](#sobre)
+- [Instalação](#instalacao)
+- [Documentação](https://nbfontana.github.io/ngx-br/docs/)
+- [Desenvolvimento](#desenvolvimento)
+- [Licença](#licenca)
 
-## About
+## Sobre
 
 
 
-## Installation
+## Instalação
 
-Install through npm:
+Instale as dependências com npm:
 ```
 npm install --save ngx-br
 ```
 
-Then include in your apps module:
+Depois inclua o NgxBrModule no módulo desejado do seu projeto:
 
 ```typescript
 import { Component, NgModule } from '@angular/core';
@@ -42,7 +42,7 @@ import { NgxBrModule } from 'ngx-br';
 export class MyModule {}
 ```
 
-Finally use in one of your apps components:
+Ao final é só utilizar o componente desejado em suas telas:
 ```typescript
 import { Component } from '@angular/core';
 
@@ -52,28 +52,20 @@ import { Component } from '@angular/core';
 export class MyComponent {}
 ```
 
-You may also find it useful to view the [demo source](https://github.com/nbfontana/ngx-br/blob/master/demo/demo.component.ts).
+Você pode também dar uma olhada no código fonte da [demo](https://github.com/nbfontana/ngx-br/blob/master/demo/demo.component.ts).
 
-### Usage without a module bundler
-```
-<script src="node_modules/ngx-br/bundles/ngx-br.umd.js"></script>
-<script>
-    // everything is exported ngxBr namespace
-</script>
-```
+## Desenvolvimento
 
-## Development
+### Prepare seu ambiente
+* Instale o [Node.js](http://nodejs.org/) com o NPM
+* Instale as dependencias locais de desenvolvimento: `npm install`
 
-### Prepare your environment
-* Install [Node.js](http://nodejs.org/) and NPM
-* Install local dev dependencies: `npm install` while current directory is this repo
+### Servidor de desenvolvimento
+Execute `npm start` ou `npm run demo` para iniciar um servidor de desenvolvimento na porta 8000 com auto reloading e tests.
 
-### Development server
-Run `npm start` or `npm run demo` to start a development server on port 8000 with auto reload + tests.
+### Testando
+Execute `npm test` para rodar todos os testes apenas uma vez ou `npm run test:watch` para rodar continuamente.
 
-### Testing
-Run `npm test` to run tests once or `npm run test:watch` to continually run tests.
-
-## License
+## Licença
 
 MIT @ Neri Bez Fontana
