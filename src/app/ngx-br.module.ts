@@ -1,7 +1,6 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import {NgxBrPipesModule} from "./pipes/pipes.module";
 import {NgxBrComponentsModule} from "./components/components.module";
-import {NgxBrValidators} from "./validators/validators";
 
 export * from './pipes/pipes.module';
 export * from './components/components.module';
@@ -11,13 +10,11 @@ export * from './commons/value-acessor-base';
 @NgModule({
   imports: [
     NgxBrComponentsModule,
-    NgxBrPipesModule,
-    NgxBrValidators
+    NgxBrPipesModule
   ],
   exports: [
     NgxBrComponentsModule,
-    NgxBrPipesModule,
-    NgxBrValidators
+    NgxBrPipesModule
   ]
 })
 export class NgxBrModule {

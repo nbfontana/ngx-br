@@ -20,8 +20,7 @@ export * from './peso/peso.module';
 export * from './telefone/telefone.module';
 
 @NgModule({
-  imports: [],
-  declarations: [
+  imports: [
     CpfModule,
     CepModule,
     CnpjModule,

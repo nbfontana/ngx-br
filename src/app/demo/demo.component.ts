@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {NgxBrValidators} from "../ngx-br.validators";
+import {NgxBrValidators} from "../validators/validators";
 
 @Component({
   selector: 'demo-root',
