@@ -1,20 +1,19 @@
-import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Component, forwardRef, Input } from '@angular/core';
-import { Estado } from './estado';
-import { ValueAccessorBase } from '../value-acessor-base';
+import {Component, forwardRef, Input} from '@angular/core';
+import {Estado} from "./estado";
+import {ValueAccessorBase} from "../value-acessor-base";
+import {NG_VALUE_ACCESSOR} from "@angular/forms";
+
+const ESTADOS_PROVIDER = {
+  provide: NG_VALUE_ACCESSOR,
+  useExisting: forwardRef(() => EstadosComponent),
+  multi: true,
+};
 
 @Component({
   selector: 'estados',
-  template: `
-    <select class="form-control" [(ngModel)]="value" id="{{id}}" [disabled]="disabled">
-      <option value="null" disabled selected>{{placeholder}}</option>
-      <option *ngFor="let estado of estados" [ngValue]="estado.sigla">{{estado.descricao}}</option>
-    </select>`,
-  providers: [{
-    provide: NG_VALUE_ACCESSOR,
-    useExisting: forwardRef(() => EstadosComponent),
-    multi: true,
-  }],
+  templateUrl: './estados.component.html',
+  styleUrls: ['./estados.component.css'],
+  providers: [ESTADOS_PROVIDER]
 })
 export class EstadosComponent extends ValueAccessorBase<Estado> {
 

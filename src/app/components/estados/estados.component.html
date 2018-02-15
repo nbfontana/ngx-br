@@ -1,0 +1,10 @@
+<select
+  class="form-control"
+  [(ngModel)]="value"
+  [id]="id"
+  [disabled]="disabled">
+
+  <option value="null" disabled selected>{{placeholder}}</option>
+  <option *ngFor="let estado of estados" [ngValue]="estado.sigla">{{estado.descricao}}</option>
+
+</select>

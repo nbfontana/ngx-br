@@ -1,0 +1,12 @@
+<input
+  currencyMask
+  class="form-control"
+  maxlength="{{maxLength}}"
+  [id]="id"
+  [disabled]="disabled"
+  [placeholder]="placeholder"
+  [ngStyle]="style"
+  [options]="{ suffix: ' %', prefix: '', thousands: '.', decimal: ',', allowNegative: true }"
+  [(ngModel)]="value"
+  (ngModelChange)="notifyChanges($event)"
+  (blur)="blurEvt($event)">

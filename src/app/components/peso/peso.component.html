@@ -1,0 +1,13 @@
+<input
+  currencyMask
+  class="form-control"
+  placeholder="{{placeholder}}"
+  maxlength="{{maxLength}}"
+  [id]="id"
+  [disabled]="disabled"
+  [placeholder]="placeholder"
+  [ngStyle]="style"
+  [options]="{ suffix: ' kg', prefix: '', thousands: '.', decimal: ',', allowNegative: false }"
+  [(ngModel)]="value"
+  (ngModelChange)="notifyChanges($event)"
+  (blur)="blurEvt($event)">

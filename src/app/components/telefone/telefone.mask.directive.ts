@@ -1,6 +1,6 @@
-import { Directive, ElementRef, HostListener } from '@angular/core';
-import { telefoneFixoPattern, telefoneCelularPattern } from '../constants';
-import { removeNonDigitValues } from '../utils';
+import {Directive, ElementRef, HostListener} from '@angular/core';
+import {removeNonDigitValues} from '../utils';
+import {telefoneCelularPattern, telefoneFixoPattern} from "../../constants";
 
 const vanillaMasker = require('vanilla-masker');
 

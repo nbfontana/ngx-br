@@ -3,7 +3,7 @@ import {NG_VALUE_ACCESSOR} from "@angular/forms";
 import {ValueAccessorBase} from "../value-acessor-base";
 import {cepPattern, cepPlaceholder} from '../../constants';
 
-const PROVIDER = {
+const CEP_PROVIDER = {
   provide: NG_VALUE_ACCESSOR,
   useExisting: forwardRef(() => CepComponent),
   multi: true,
@@ -13,7 +13,7 @@ const PROVIDER = {
   selector: 'cep',
   templateUrl: './cep.component.html',
   styleUrls: ['./cep.component.css'],
-  providers: [PROVIDER]
+  providers: [CEP_PROVIDER]
 })
 export class CepComponent extends ValueAccessorBase<string> {
   public pattern: string = cepPattern;
@@ -22,11 +22,11 @@ export class CepComponent extends ValueAccessorBase<string> {
   @Input() placeholder: string = cepPlaceholder;
   @Output() blur: EventEmitter<any> = new EventEmitter();
 
-  transform(value: string): string {
-    return value ? value.replace(/[^\d]/g, '').trim().slice(0, 8) : value;
-  }
-
   public blurEvt(event): void {
     this.blur.emit(event);
+  }
+
+  transform(value: string): string {
+    return value ? value.replace(/[^\d]/g, '').trim().slice(0, 8) : value;
   }
 }

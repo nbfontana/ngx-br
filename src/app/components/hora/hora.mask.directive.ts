@@ -1,16 +1,16 @@
 import { Directive, ElementRef } from '@angular/core';
-import { percentualPatternConfig } from '../constants';
+import {horaPattern} from "../../constants";
 
 const vanillaMasker = require('vanilla-masker');
 
 @Directive({
-  selector: '[percentualMask]',
+  selector: '[horaMask]',
 })
-export class PercentualMaskDirective {
+export class HoraMaskDirective {
   public nativeElement: HTMLInputElement;
 
   constructor(public element: ElementRef) {
     this.nativeElement = this.element.nativeElement;
-    vanillaMasker(this.nativeElement).maskMoney(percentualPatternConfig);
+    vanillaMasker(this.nativeElement).maskPattern(horaPattern);
   }
 }

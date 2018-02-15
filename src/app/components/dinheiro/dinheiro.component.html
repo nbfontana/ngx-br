@@ -1,0 +1,13 @@
+<input
+  currencyMask
+  class="form-control"
+  maxlength="{{maxLength}}"
+  [id]="id"
+  [disabled]="disabled"
+  [placeholder]="placeholder"
+  [ngStyle]="style"
+  [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',', allowNegative: false }"
+  [(ngModel)]="value"
+  (keydown)="onKeydown($event)"
+  (ngModelChange)="notifyChanges($event)"
+  (blur)="blurEvt($event)">

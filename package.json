@@ -25,7 +25,8 @@
   "dependencies": {
     "chai": "^4.1.2",
     "cpf_cnpj": "0.2.0",
-    "vanilla-masker": "1.2.0"
+    "vanilla-masker": "1.2.0",
+    "ngx-currency": "1.1.1"
   },
   "devDependencies": {
     "@angular/animations": "^5.2.0",

@@ -1,0 +1,9 @@
+<input
+  telefoneMask
+  class="form-control"
+  maxlength="16"
+  [id]="id"
+  [disabled]="disabled"
+  [placeholder]="placeholder"
+  [(ngModel)]="value"
+  (ngModelChange)="notifyChanges($event)">

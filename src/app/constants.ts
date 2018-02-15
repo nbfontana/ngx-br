@@ -11,6 +11,7 @@ export const cpfPlaceholder = '000.000.000-00';
 export const pesoPlaceholder = '0,00 kg';
 export const dinheiroPlaceholder = 'R$ 0,00';
 export const percentualPlaceholder = '0%';
+export const horaPlaceholder = 'HH:MM';
 
 export const dinheiroPatternConfig = {
   precision: 2,

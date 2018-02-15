@@ -1,10 +1,10 @@
 <input
-  cepMask
-  class="form-control"
-  maxlength="9"
+  horaMask
+  class="form-control text-right"
+  maxlength="5"
   [id]="id"
-  [placeholder]="placeholder"
   [disabled]="disabled"
+  [placeholder]="placeholder"
   [(ngModel)]="value"
   (ngModelChange)="notifyChanges($event)"
   (blur)="blurEvt($event)">
