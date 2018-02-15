@@ -11,7 +11,7 @@ import { FormControl } from '@angular/forms';
     </span>
   `,
 })
-export class ValidacaoCnpjComponent {
+export class CnpjComponentContainer {
 
   @Input() control: FormControl;
   @Input() requiredMsg: string = 'Este campo é obrigatório';

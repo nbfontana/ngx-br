@@ -1,7 +1,7 @@
-import {Component, EventEmitter, forwardRef, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
-import {ValueAccessorBase} from "../value-acessor-base";
-import {pesoPlaceholder} from "../../constants";
+import {ValueAccessorBase} from "../../commons/value-acessor-base";
+import {pesoPlaceholder} from "../../commons/constants";
 
 const PESO_PROVIDER = {
   provide: NG_VALUE_ACCESSOR,

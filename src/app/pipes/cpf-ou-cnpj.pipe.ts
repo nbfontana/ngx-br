@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import {cnpjPattern, cpfPattern} from "../constants";
+import {Pipe, PipeTransform} from '@angular/core';
+import {cnpjPattern, cpfPattern} from "../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 const CPF_LENGTH = 11;

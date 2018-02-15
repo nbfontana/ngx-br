@@ -5,6 +5,9 @@ import {PercentualMaskDirective} from "./percentual.mask.directive";
 import {FormsModule} from "@angular/forms";
 import {NgxCurrencyModule} from 'ngx-currency';
 
+export * from './percentual.component';
+export * from './percentual.mask.directive';
+
 @NgModule({
   imports: [
     CommonModule,

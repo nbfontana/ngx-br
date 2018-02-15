@@ -1,7 +1,8 @@
 import { Directive, ElementRef } from '@angular/core';
-import {cpfPattern} from "../../constants";
+import {cpfPattern} from "../../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
+
 @Directive({
   selector: '[cpfMask]',
 })

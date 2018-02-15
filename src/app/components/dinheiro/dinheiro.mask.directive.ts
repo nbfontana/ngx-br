@@ -1,5 +1,5 @@
 import { Directive, ElementRef } from '@angular/core';
-import {dinheiroPatternConfig} from "../../constants";
+import {dinheiroPatternConfig} from "../../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 

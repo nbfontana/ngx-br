@@ -1,5 +1,5 @@
 import {Directive, ElementRef} from '@angular/core';
-import {cepPattern} from "../../constants";
+import {cepPattern} from "../../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 

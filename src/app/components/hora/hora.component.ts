@@ -1,7 +1,7 @@
 import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
-import {ValueAccessorBase} from "../value-acessor-base";
-import {horaPattern, horaPlaceholder} from "../../constants";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ValueAccessorBase} from "../../commons/value-acessor-base";
+import {horaPattern, horaPlaceholder} from "../../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 

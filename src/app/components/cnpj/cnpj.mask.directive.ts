@@ -1,5 +1,5 @@
 import {Directive, ElementRef} from '@angular/core';
-import {cnpjPattern} from "../../constants";
+import {cnpjPattern} from "../../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 

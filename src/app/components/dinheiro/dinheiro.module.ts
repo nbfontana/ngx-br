@@ -5,6 +5,9 @@ import {DinheiroMaskDirective} from "./dinheiro.mask.directive";
 import {FormsModule} from "@angular/forms";
 import {NgxCurrencyModule} from 'ngx-currency';
 
+export * from './dinheiro.component';
+export * from './dinheiro.mask.directive';
+
 @NgModule({
   imports: [
     CommonModule,

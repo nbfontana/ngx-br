@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import {cpfPattern} from "../constants";
+import {Pipe, PipeTransform} from '@angular/core';
+import {cpfPattern} from "../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 

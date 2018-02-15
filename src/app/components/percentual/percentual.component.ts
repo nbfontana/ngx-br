@@ -1,7 +1,7 @@
-import {Component, EventEmitter, forwardRef, Input, OnInit, Output} from '@angular/core';
-import {ValueAccessorBase} from "../value-acessor-base";
-import {percentualPlaceholder} from "../../constants";
+import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ValueAccessorBase} from "../../commons/value-acessor-base";
+import {percentualPlaceholder} from "../../commons/constants";
 
 const PERCENTUAL_PROVIDER = {
   provide: NG_VALUE_ACCESSOR,

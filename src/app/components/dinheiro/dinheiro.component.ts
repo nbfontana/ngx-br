@@ -1,7 +1,7 @@
 import {Component, ElementRef, EventEmitter, forwardRef, Input, Output} from '@angular/core';
-import {ValueAccessorBase} from "../value-acessor-base";
-import {dinheiroPlaceholder} from "../../constants";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ValueAccessorBase} from "../../commons/value-acessor-base";
+import {dinheiroPlaceholder} from "../../commons/constants";
 
 const DINHEIRO_PROVIDER = {
   provide: NG_VALUE_ACCESSOR,

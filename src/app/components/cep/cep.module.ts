@@ -4,6 +4,9 @@ import {CepComponent} from './cep.component';
 import {CepMaskDirective} from "./cep.mask.directive";
 import {FormsModule} from '@angular/forms';
 
+export * from './cep.mask.directive';
+export * from './cep.component';
+
 @NgModule({
   imports: [
     CommonModule,

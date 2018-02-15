@@ -1,5 +1,5 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import {telefoneFixoPattern, telefoneCelularPattern} from "../constants";
+import {Pipe, PipeTransform} from '@angular/core';
+import {telefoneCelularPattern, telefoneFixoPattern} from "../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 

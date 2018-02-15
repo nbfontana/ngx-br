@@ -1,7 +1,7 @@
 import {Component, forwardRef, Input} from '@angular/core';
 import {Estado} from "./estado";
-import {ValueAccessorBase} from "../value-acessor-base";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ValueAccessorBase} from "../../commons/value-acessor-base";
 
 const ESTADOS_PROVIDER = {
   provide: NG_VALUE_ACCESSOR,

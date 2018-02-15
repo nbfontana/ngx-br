@@ -1,7 +1,7 @@
 import {Component, EventEmitter, forwardRef, Input, Output} from '@angular/core';
-import {ValueAccessorBase} from "../value-acessor-base";
-import {cnpjPattern, cnpjPlaceholder} from "../../constants";
 import {NG_VALUE_ACCESSOR} from "@angular/forms";
+import {ValueAccessorBase} from "../../commons/value-acessor-base";
+import {cnpjPattern, cnpjPlaceholder} from "../../commons/constants";
 
 const CNPJ_PROVIDER = {
   provide: NG_VALUE_ACCESSOR,

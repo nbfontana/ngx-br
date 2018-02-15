@@ -3,6 +3,9 @@ import {CommonModule} from '@angular/common';
 import {EstadosComponent} from './estados.component';
 import {FormsModule} from "@angular/forms";
 
+export * from './estados.component';
+export * from './estado';
+
 @NgModule({
   imports: [
     CommonModule,

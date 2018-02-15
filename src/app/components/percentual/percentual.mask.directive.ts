@@ -1,5 +1,5 @@
 import {Directive, ElementRef} from '@angular/core';
-import {percentualPatternConfig} from "../../constants";
+import {percentualPatternConfig} from "../../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 

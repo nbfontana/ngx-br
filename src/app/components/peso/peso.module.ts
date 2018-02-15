@@ -4,6 +4,8 @@ import {PesoComponent} from './peso.component';
 import {FormsModule} from "@angular/forms";
 import {NgxCurrencyModule} from 'ngx-currency';
 
+export * from './peso.component';
+
 @NgModule({
   imports: [
     CommonModule,

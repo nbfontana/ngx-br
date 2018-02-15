@@ -3,7 +3,11 @@ import {CommonModule} from '@angular/common';
 import {CpfComponent} from './cpf.component';
 import {FormsModule} from "@angular/forms";
 import {CpfMaskDirective} from "./cpf.mask.directive";
-import {ValidacaoCpfComponent} from "./cpf.component.container";
+import {CpfComponentContainer} from "./cpf.component.container";
+
+export * from './cpf.component';
+export * from './cpf.component.container';
+export * from './cpf.mask.directive';
 
 @NgModule({
   imports: [
@@ -13,12 +17,12 @@ import {ValidacaoCpfComponent} from "./cpf.component.container";
   declarations: [
     CpfComponent,
     CpfMaskDirective,
-    ValidacaoCpfComponent
+    CpfComponentContainer
   ],
   exports: [
     CpfComponent,
     CpfMaskDirective,
-    ValidacaoCpfComponent
+    CpfComponentContainer
   ]
 })
 export class CpfModule {}

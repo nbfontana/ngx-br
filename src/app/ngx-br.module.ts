@@ -1,48 +1,23 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from "@angular/forms";
 import {NgxBrPipesModule} from "./pipes/pipes.module";
-import {CpfModule} from "./components/cpf/cpf.module";
-import {CepModule} from "./components/cep/cep.module";
-import {CnpjModule} from "./components/cnpj/cnpj.module";
-import {DinheiroModule} from "./components/dinheiro/dinheiro.module";
-import {EstadosModule} from "./components/estados/estados.module";
-import {HoraModule} from "./components/hora/hora.module";
-import {PercentualModule} from "./components/percentual/percentual.module";
-import {PesoModule} from "./components/peso/peso.module";
-import {TelefoneModule} from "./components/telefone/telefone.module";
-import {NgxCurrencyModule} from 'ngx-currency';
+import {NgxBrComponentsModule} from "./components/components.module";
+import {NgxBrValidators} from "./validators/validators";
 
-export * from './ngx-br.validators';
+export * from './pipes/pipes.module';
+export * from './components/components.module';
+export * from './validators/validators';
+export * from './commons/value-acessor-base';
 
 @NgModule({
   imports: [
-    NgxCurrencyModule,
-    CommonModule,
-    FormsModule,
+    NgxBrComponentsModule,
     NgxBrPipesModule,
-    CpfModule,
-    CepModule,
-    CnpjModule,
-    DinheiroModule,
-    EstadosModule,
-    HoraModule,
-    PercentualModule,
-    PesoModule,
-    TelefoneModule,
+    NgxBrValidators
   ],
   exports: [
-    NgxCurrencyModule,
+    NgxBrComponentsModule,
     NgxBrPipesModule,
-    CpfModule,
-    CepModule,
-    CnpjModule,
-    DinheiroModule,
-    EstadosModule,
-    HoraModule,
-    PercentualModule,
-    PesoModule,
-    TelefoneModule,
+    NgxBrValidators
   ]
 })
 export class NgxBrModule {

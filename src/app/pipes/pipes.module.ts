@@ -4,6 +4,11 @@ import {CnpjPipe} from "./cnpj.pipe";
 import {CpfCnpjPipe} from "./cpf-ou-cnpj.pipe";
 import {TelefonePipe} from "./telefone.pipe";
 
+export * from './cnpj.pipe';
+export * from './cpf-ou-cnpj.pipe';
+export * from './cpf.pipe';
+export * from './telefone.pipe';
+
 @NgModule({
   imports: [],
   declarations: [

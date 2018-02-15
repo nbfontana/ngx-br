@@ -1,5 +1,5 @@
-import { Directive, ElementRef } from '@angular/core';
-import {horaPattern} from "../../constants";
+import {Directive, ElementRef} from '@angular/core';
+import {horaPattern} from "../../commons/constants";
 
 const vanillaMasker = require('vanilla-masker');
 

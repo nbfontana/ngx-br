@@ -3,7 +3,11 @@ import {CommonModule} from '@angular/common';
 import {CnpjComponent} from './cnpj.component';
 import {CnpjMaskDirective} from "./cnpj.mask.directive";
 import {FormsModule} from "@angular/forms";
-import {ValidacaoCnpjComponent} from "./cnpj.component.container";
+import {CnpjComponentContainer} from "./cnpj.component.container";
+
+export * from './cnpj.component';
+export * from './cnpj.mask.directive';
+export * from './cnpj.component.container';
 
 @NgModule({
   imports: [
@@ -13,12 +17,12 @@ import {ValidacaoCnpjComponent} from "./cnpj.component.container";
   declarations: [
     CnpjComponent,
     CnpjMaskDirective,
-    ValidacaoCnpjComponent
+    CnpjComponentContainer
   ],
   exports: [
     CnpjComponent,
     CnpjMaskDirective,
-    ValidacaoCnpjComponent
+    CnpjComponentContainer
   ]
 })
 export class CnpjModule { }
