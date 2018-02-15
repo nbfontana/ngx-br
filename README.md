@@ -13,7 +13,6 @@ https://nbfontana.github.io/ngx-br/
 
 - [Sobre](#sobre)
 - [Instalação](#instalacao)
-- [Documentação](https://nbfontana.github.io/ngx-br/docs/)
 - [Desenvolvimento](#desenvolvimento)
 - [Licença](#licenca)
 
@@ -52,7 +51,6 @@ import { Component } from '@angular/core';
 export class MyComponent {}
 ```
 
-Você pode também dar uma olhada no código fonte da [demo](https://github.com/nbfontana/ngx-br/blob/master/demo/demo.component.ts).
 
 ## Desenvolvimento
 

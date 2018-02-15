@@ -1,0 +1,9 @@
+.example-box {
+  border: 1px solid lightgrey;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.example-box > div > label {
+  color: #b3b3b3;
+}
