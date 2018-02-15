@@ -1,6 +1,6 @@
 {
   "name": "ngx-br",
-  "version": "0.0.0-development",
+  "version": "5.0.2",
   "license": "MIT",
   "author": "Neri Bez Fontana <nerifontana@gmail.com>",
   "scripts": {
@@ -9,10 +9,10 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ci": "npm i -d && npm run packagr && cd /dist && npm publish",
+    "ci": "npm run packagr",
     "packagr": "ng-packagr -p ng-package.json",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release pre && npm publish dist && semantic-release post"
   },
   "dependencies": {
     "cpf_cnpj": "0.2.0",
@@ -20,8 +20,8 @@
     "ngx-currency": "1.1.1"
   },
   "devDependencies": {
-    "@angular/animations": "^5.2.0",
     "@angular/cli": "1.6.8",
+    "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
     "@angular/compiler-cli": "^5.2.0",
