@@ -1,0 +1,11 @@
+<input
+  cnpjMask
+  class="form-control"
+  type="text"
+  maxlength="18"
+  [id]="id"
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [(ngModel)]="value"
+  (ngModelChange)="notifyChanges($event)"
+  (blur)="blurEvt($event)">

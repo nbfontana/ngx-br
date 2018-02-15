@@ -4,6 +4,7 @@ import {FormsModule} from "@angular/forms";
 import {NgxBrPipesModule} from "./pipes/pipes.module";
 import {CpfModule} from "./components/cpf/cpf.module";
 import {CepModule} from "./components/cep/cep.module";
+import {CnpjModule} from "./components/cnpj/cnpj.module";
 
 export * from './ngx-br.validators';
 
@@ -13,13 +14,15 @@ export * from './ngx-br.validators';
     FormsModule,
     NgxBrPipesModule,
     CpfModule,
-    CepModule
+    CepModule,
+    CnpjModule
   ],
   declarations: [],
   exports: [
     NgxBrPipesModule,
     CpfModule,
-    CepModule
+    CepModule,
+    CnpjModule
   ]
 })
 export class NgxBrModule {
