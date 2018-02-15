@@ -17,7 +17,6 @@
     "release:git": "git add package.json && git commit -m \"chore: bump version number\" && standard-version --first-release && git push --follow-tags origin master",
     "release:npm": "npm run packagr"
   },
-  "private": true,
   "dependencies": {
     "chai": "^4.1.2",
     "cpf_cnpj": "0.2.0",
