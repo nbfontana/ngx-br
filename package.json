@@ -6,10 +6,10 @@
   "scripts": {
     "ng": "ng",
     "start": "npm i && ng serve",
-    "build": "npm run packagr",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "ci": "npm i -d && npm run packagr && cd /dist && npm publish",
     "packagr": "ng-packagr -p ng-package.json",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
