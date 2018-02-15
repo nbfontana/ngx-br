@@ -1,24 +1,20 @@
 {
   "name": "ngx-br",
-  "version": "5.0.2",
+  "version": "0.0.0-development",
   "license": "MIT",
-  "author": "Neri Bez Fontana",
+  "author": "Neri Bez Fontana <nerifontana@gmail.com>",
   "scripts": {
     "ng": "ng",
     "start": "npm i && ng serve",
-    "build": "ng build --prod",
+    "build": "npm run packagr",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "commit": "git-cz",
     "packagr": "ng-packagr -p ng-package.json",
-    "prerelease": "ng test",
-    "release": "npm run release:git && npm run release:npm",
-    "release:git": "git add package.json && git commit -m \"chore: bump version number\" && standard-version --first-release && git push --follow-tags origin master",
-    "release:npm": "npm run packagr"
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "chai": "^4.1.2",
     "cpf_cnpj": "0.2.0",
     "vanilla-masker": "1.2.0",
     "ngx-currency": "1.1.1"
@@ -48,18 +44,19 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "ng-packagr": "^2.0.0",
     "protractor": "~5.1.2",
     "rxjs": "^5.5.6",
+    "semantic-release": "^12.4.1",
+    "travis-deploy-once": "^4.3.4",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "typescript": "~2.5.3",
-    "zone.js": "^0.8.19",
-    "ng-packagr": "^2.0.0",
-    "standard-version": "4.0.0"
+    "zone.js": "^0.8.19"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nbfontana/ngx-br.git"
+    "url": "https://github.com/nbfontana/ngx-br.git"
   },
   "bugs": {
     "url": "https://github.com/nbfontana/ngx-br/issues"
