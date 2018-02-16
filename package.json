@@ -1,6 +1,6 @@
 {
   "name": "@nbfontana/ngx-br",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0",
   "license": "MIT",
   "description": "Brazilian components module for Angular",
   "author": "Neri Bez Fontana <nerifontana@gmail.com>",
@@ -14,7 +14,7 @@
     "ci": "npm run packagr",
     "packagr": "ng-packagr -p ng-package.json",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release && npm publish --access public"
+    "semantic-release": "semantic-release && npm publish"
   },
   "dependencies": {
     "cpf_cnpj": "0.2.0",
