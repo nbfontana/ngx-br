@@ -1,6 +1,6 @@
 {
-  "name": "ngx-br",
-  "version": "5.1.1",
+  "name": "@nbfontana/ngx-br",
+  "version": "0.0.0-semantically-released",
   "license": "MIT",
   "description": "Brazilian components module for Angular",
   "author": "Neri Bez Fontana <nerifontana@gmail.com>",

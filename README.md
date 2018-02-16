@@ -1,4 +1,4 @@
-# ngx br
+# @nbfontana/ngx-br
 [![Build Status](https://travis-ci.org/nbfontana/ngx-br.svg?branch=master)](https://travis-ci.org/nbfontana/ngx-br)
 [![npm version](https://badge.fury.io/js/ngx-br.svg)](http://badge.fury.io/js/ngx-br)
 [![devDependency Status](https://david-dm.org/nbfontana/ngx-br/dev-status.svg)](https://david-dm.org/nbfontana/ngx-br?type=dev)
@@ -24,14 +24,14 @@ https://nbfontana.github.io/ngx-br/
 
 Instale as dependências com npm:
 ```
-npm install --save ngx-br
+npm install --save @nbfontana/ngx-br
 ```
 
 Depois inclua o NgxBrModule no módulo desejado do seu projeto:
 
 ```typescript
 import { Component, NgModule } from '@angular/core';
-import { NgxBrModule } from 'ngx-br';
+import { NgxBrModule } from '@nbfontana/ngx-br';
 
 @NgModule({
   imports: [
