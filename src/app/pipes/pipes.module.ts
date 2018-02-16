@@ -22,6 +22,12 @@ export * from './telefone.pipe';
     CnpjPipe,
     CpfCnpjPipe,
     TelefonePipe
+  ],
+  providers: [
+    CpfPipe,
+    CnpjPipe,
+    CpfCnpjPipe,
+    TelefonePipe
   ]
 })
 export class NgxBrPipesModule {}
