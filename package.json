@@ -5,11 +5,10 @@
   "description": "Brazilian components module for Angular ",
   "author": "Neri Bez Fontana <nerifontana@gmail.com>",
   "scripts": {
-    "ng": "ng",
+    "dev": "ng serve",
     "start": "npm i && ng serve",
-    "test": "ng test",
+    "test": "ng test --watch false",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "ci": "npm run packagr",
     "packagr": "ng-packagr -p ng-package.json",
     "travis-deploy-once": "travis-deploy-once",
@@ -39,6 +38,7 @@
     "codelyzer": "^4.0.1",
     "core-js": "^2.4.1",
     "cz-conventional-changelog": "^2.1.0",
+    "ghooks": "^2.0.2",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
@@ -75,6 +75,9 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "ghooks": {
+      "pre-commit": "npm run lint && npm run test"
     }
   }
 }
