@@ -14,7 +14,7 @@
     "ci": "npm run packagr",
     "packagr": "ng-packagr -p ng-package.json",
     "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release && npm publish dist"
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "cpf_cnpj": "0.2.0",
