@@ -7,11 +7,9 @@
   "scripts": {
     "dev": "ng serve",
     "start": "npm i && ng serve",
-    "test": "ng test --watch false",
     "lint": "ng lint",
-    "commit": "git-cz",
-    "commitmsg": "validate-commit-msg",
-    "ci": "npm run packagr",
+    "test": "ng test --watch=false --code-coverage=true",
+    "report-coverage": "codecov",
     "packagr": "ng-packagr -p ng-package.json",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
@@ -37,6 +35,7 @@
     "@types/jasmine": "~2.8.3",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "^9.4.6",
+    "codecov": "^3.0.0",
     "codelyzer": "^4.0.1",
     "core-js": "^2.4.1",
     "cz-conventional-changelog": "^2.1.0",

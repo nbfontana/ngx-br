@@ -6,9 +6,13 @@ notifications:
   email: false
 node_js:
   - '8'
+install:
+  - npm install -g codecov
 script:
-  - npm run ci
+  - npm run test
+  - npm run report-coverage
 after_success:
+  - npm run packagr
   - npm run travis-deploy-once "npm run semantic-release"
 branches:
   except:
