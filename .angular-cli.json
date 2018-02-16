@@ -39,7 +39,7 @@
       "exclude": "**/node_modules/**"
     },
     {
-      "project": "e2e/tsconfig.e2e.json",
+      "project": "src/e2e/tsconfig.e2e.json",
       "exclude": "**/node_modules/**"
     }
   ],
