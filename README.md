@@ -3,6 +3,10 @@
 [![npm version](https://badge.fury.io/js/%40nbfontana%2Fngx-br.svg)](https://badge.fury.io/js/%40nbfontana%2Fngx-br)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nbfontana/ngx-br/master/LICENSE)
 
+## Versão anterior (AVISO)
+
+**ngx-br** (< v0.3.1) agora é **@nbfontana/ngx-br**. Atualize!
+
 ## Demo
 https://nbfontana.github.io/ngx-br/
 
