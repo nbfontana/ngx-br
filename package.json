@@ -1,8 +1,7 @@
 {
   "name": "ngx-br",
-  "version": "5.0.3",
   "license": "MIT",
-  "description": "Brazilian components module for Angular ",
+  "description": "Brazilian components module for Angular",
   "author": "Neri Bez Fontana <nerifontana@gmail.com>",
   "scripts": {
     "dev": "ng serve",
