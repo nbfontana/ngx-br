@@ -1,7 +1,6 @@
 # @nbfontana/ngx-br
 [![Build Status](https://travis-ci.org/nbfontana/ngx-br.svg?branch=master)](https://travis-ci.org/nbfontana/ngx-br)
-[![npm version](https://badge.fury.io/js/ngx-br.svg)](http://badge.fury.io/js/ngx-br)
-[![devDependency Status](https://david-dm.org/nbfontana/ngx-br/dev-status.svg)](https://david-dm.org/nbfontana/ngx-br?type=dev)
+[![npm version](https://badge.fury.io/js/%40nbfontana%2Fngx-br.svg)](https://badge.fury.io/js/%40nbfontana%2Fngx-br)
 [![GitHub issues](https://img.shields.io/github/issues/nbfontana/ngx-br.svg)](https://github.com/nbfontana/ngx-br/issues)
 [![GitHub stars](https://img.shields.io/github/stars/nbfontana/ngx-br.svg)](https://github.com/nbfontana/ngx-br/stargazers)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nbfontana/ngx-br/master/LICENSE)
