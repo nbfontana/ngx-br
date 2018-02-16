@@ -2,6 +2,7 @@
   "name": "ngx-br",
   "version": "5.0.3",
   "license": "MIT",
+  "description": "Brazilian components module for Angular ",
   "author": "Neri Bez Fontana <nerifontana@gmail.com>",
   "scripts": {
     "ng": "ng",
@@ -20,8 +21,8 @@
     "ngx-currency": "1.1.1"
   },
   "devDependencies": {
-    "@angular/cli": "1.6.8",
     "@angular/animations": "^5.2.0",
+    "@angular/cli": "1.6.8",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
     "@angular/compiler-cli": "^5.2.0",
@@ -37,6 +38,7 @@
     "@types/node": "^9.4.6",
     "codelyzer": "^4.0.1",
     "core-js": "^2.4.1",
+    "cz-conventional-changelog": "^2.1.0",
     "jasmine-core": "~2.8.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~2.0.0",
@@ -69,5 +71,10 @@
     "cnpj",
     "cep",
     "telefone"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
