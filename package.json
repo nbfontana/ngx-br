@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "ng serve",
     "start": "npm i && ng serve",
+    "test": "ng test --watch=false",
+    "test:watch": "ng test",
+    "test:coverage": "ng test --watch=false --code-coverage=true",
     "lint": "ng lint",
-    "test": "ng test --watch=false --code-coverage=true",
     "report-coverage": "codecov",
     "packagr": "ng-packagr -p ng-package.json",
     "travis-deploy-once": "travis-deploy-once",
