@@ -4,6 +4,11 @@
 [![codecov](https://codecov.io/gh/nbfontana/ngx-br/branch/master/graph/badge.svg)](https://codecov.io/gh/nbfontana/ngx-br)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/nbfontana/ngx-br/master/LICENSE)
 
+[![bitHound Overall Score](https://www.bithound.io/github/nbfontana/ngx-br/badges/score.svg)](https://www.bithound.io/github/nbfontana/ngx-br)
+[![bitHound Code](https://www.bithound.io/github/nbfontana/ngx-br/badges/code.svg)](https://www.bithound.io/github/nbfontana/ngx-br)
+[![bitHound Dependencies](https://www.bithound.io/github/nbfontana/ngx-br/badges/dependencies.svg)](https://www.bithound.io/github/nbfontana/ngx-br/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/nbfontana/ngx-br/badges/devDependencies.svg)](https://www.bithound.io/github/nbfontana/ngx-br/master/dependencies/npm)
+
 ## Versão anterior (AVISO)
 
 **ngx-br** (< v0.3.1) agora é **@nbfontana/ngx-br**. Atualize!
