@@ -66,10 +66,11 @@ export class MyComponent {}
 * Instale as dependencias locais de desenvolvimento: `npm install`
 
 ### Servidor de desenvolvimento
-Execute `npm start` ou `npm run demo` para iniciar um servidor de desenvolvimento na porta 8000 com auto reloading e tests.
+O ngx-br é desenvolvido com a estrutura base do @angular/cli então segue o mesmo padrão.
+Execute `ng serve`, `npm run dev` ou `npm star` para iniciar um servidor de desenvolvimento na porta 4200.
 
 ### Testando
-Execute `npm test` para rodar todos os testes apenas uma vez ou `npm run test:watch` para rodar continuamente.
+Execute `npm run test` ou `ng test` para rodar todos os testes apenas uma vez ou `npm run test:watch` para rodar continuamente.
 
 ## Licença
 
