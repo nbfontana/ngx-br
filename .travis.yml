@@ -25,7 +25,7 @@ before_script:
   - npm install -g codecov
   - npm install
 script:
-  - npm run test
+  - npm run test:coverage
   - npm run report-coverage
 after_success:
   - npm run packagr
