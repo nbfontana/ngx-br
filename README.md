@@ -14,9 +14,21 @@
 
 ## Contents
 
-- [Usage](#usage)
 - [Components](#components)
+  - [Cep]()
+  - [Cnpj]()
+  - [Cpf]()
+  - [Dinheiro]()
+  - [Estados]()
+  - [Hora]()
+  - [Percentual]()
+  - [Peso]()
+  - [Telefone]()
 - [Pipes](#pipes)
+  - [Cpf]()
+  - [Cnpj]()
+  - [Cpf ou cnpj]()
+  - [Telefone]()
 
 ## Usage
 
@@ -53,24 +65,5 @@ import { Component } from '@angular/core';
 })
 export class MyComponent {}
 ```
-
-## Components
-
-* Cep
-* Cnpj
-* Cpf
-* Dinheiro
-* Estados
-* Hora
-* Percentual
-* Peso
-* Telefone
-
-## Pipes
-
-* Cpf
-* Cnpj
-* Cpf ou cnpj
-* Telefone
 
 > MIT @ Neri Bez Fontana
