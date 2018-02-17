@@ -18,7 +18,7 @@ Feel free to use the entire NgxBrModule if it's your need, but you can always im
 
 ## Contents
 
-- [Components](#components)
+- Components
   - [Cep]()
   - [Cnpj]()
   - [Cpf]()
@@ -28,7 +28,7 @@ Feel free to use the entire NgxBrModule if it's your need, but you can always im
   - [Percentual]()
   - [Peso]()
   - [Telefone]()
-- [Pipes](#pipes)
+- Pipes
   - [Cpf]()
   - [Cnpj]()
   - [Cpf ou cnpj]()
