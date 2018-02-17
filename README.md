@@ -70,4 +70,11 @@ import { Component } from '@angular/core';
 export class MyComponent {}
 ```
 
+## FAQ
+
+### How do the inputs look like? `bootstrap`, `material`?
+
+NgxBr is using **Bootstrap** classes for now, so, if you override the bootstrap style for **.form-control**, it'll be applied to all inputs as well. But we'll work to let it more flexible, all ideas are welcome! Open an Issue (you can write it in Portuguese).
+
+
 > MIT @ Neri Bez Fontana
