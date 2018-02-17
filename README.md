@@ -19,9 +19,9 @@ https://nbfontana.github.io/ngx-br/
 ## Índice
 
 - [Sobre](#sobre)
-- [Instalação](#instalacao)
+- [Instalação](#instalação)
 - [Desenvolvimento](#desenvolvimento)
-- [Licença](#licenca)
+- [Licença](#licença)
 
 ## Sobre
 
