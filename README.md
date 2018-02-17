@@ -9,13 +9,6 @@
 [![bitHound Dependencies](https://www.bithound.io/github/nbfontana/ngx-br/badges/dependencies.svg)](https://www.bithound.io/github/nbfontana/ngx-br/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/nbfontana/ngx-br/badges/devDependencies.svg)](https://www.bithound.io/github/nbfontana/ngx-br/master/dependencies/npm)
 
-## Versão anterior (AVISO)
-
-**ngx-br** (< v0.3.1) agora é **@nbfontana/ngx-br**. Atualize!
-
-## Demo
-https://nbfontana.github.io/ngx-br/
-
 ## Índice
 
 - [Sobre](#sobre)
@@ -25,7 +18,7 @@ https://nbfontana.github.io/ngx-br/
 
 ## Sobre
 
-
+**ngx-br** (< v0.3.1) agora é **@nbfontana/ngx-br**. Atualize!
 
 ## Instalação
 
