@@ -12,6 +12,10 @@
 [![bitHound Dependencies](https://www.bithound.io/github/nbfontana/ngx-br/badges/dependencies.svg)](https://www.bithound.io/github/nbfontana/ngx-br/master/dependencies/npm)
 [![bitHound Dev Dependencies](https://www.bithound.io/github/nbfontana/ngx-br/badges/devDependencies.svg)](https://www.bithound.io/github/nbfontana/ngx-br/master/dependencies/npm)
 
+There're many repositories covering Brazilian needs for software development. NgxBr is here to concentrate almost everything that you need to build a functional pt-br software with Angular. We give you a full set of components (inputs, select, etc) covering fields like CEP, CPF, CNPJ, ESTADOS, etc. Beside that, we make available everything we use to build our components for the user, like Pipes and Directives.
+
+Feel free to use the entire NgxBrModule if it's your need, but you can always import components or pipes separatedly. Use it the way you want to.
+
 ## Contents
 
 - [Components](#components)
@@ -29,7 +33,7 @@
   - [Cnpj]()
   - [Cpf ou cnpj]()
   - [Telefone]()
-
+  
 ## Usage
 
 Install as a dependency:
