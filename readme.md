@@ -28,10 +28,10 @@ Feel free to use the entire NgxBrModule if it's your need, but you can always im
   - [Peso](https://github.com/nbfontana/ngx-br/tree/master/src/app/components/peso)
   - [Telefone](https://github.com/nbfontana/ngx-br/tree/master/src/app/components/telefone)
 - Pipes
-  - [Cpf]()
-  - [Cnpj]()
-  - [Cpf ou cnpj]()
-  - [Telefone]()
+  - [Cpf](https://github.com/nbfontana/ngx-br/tree/master/src/app/pipes)
+  - [Cnpj](https://github.com/nbfontana/ngx-br/tree/master/src/app/pipes)
+  - [Cpf ou cnpj](https://github.com/nbfontana/ngx-br/tree/master/src/app/pipes)
+  - [Telefone](https://github.com/nbfontana/ngx-br/tree/master/src/app/pipes)
 - Directives
   - [Cep]()
   - [Cnpj]()
