@@ -32,6 +32,7 @@ Feel free to use the entire NgxBrModule if it's your need, but you can always im
   - [Cnpj](https://github.com/nbfontana/ngx-br/tree/master/src/app/pipes)
   - [Cpf ou cnpj](https://github.com/nbfontana/ngx-br/tree/master/src/app/pipes)
   - [Telefone](https://github.com/nbfontana/ngx-br/tree/master/src/app/pipes)
+  - [Cep](https://github.com/nbfontana/ngx-br/tree/master/src/app/pipes)
 - Directives
   - [Cep]()
   - [Cnpj]()
