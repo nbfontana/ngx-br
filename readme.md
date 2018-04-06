@@ -86,7 +86,9 @@ NgxBr is using **Bootstrap** classes for now, so, if you override the bootstrap 
 
 ### Help needed
 Maybe you could help me define the way that components may be stylized?
+
 Wich components should be added?
+
 What kind of utilities may also be added and helpfull to be used within and outside ngx-br?
 
 
