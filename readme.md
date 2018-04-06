@@ -84,5 +84,10 @@ export class MyComponent {}
 
 NgxBr is using **Bootstrap** classes for now, so, if you override the bootstrap style for **.form-control**, it'll be applied to all inputs as well. But we'll work to let it more flexible, all ideas are welcome! Open an Issue (you can write it in Portuguese).
 
+### Help needed
+Maybe you could help me define the way that components may be stylized?
+Wich components should be added?
+What kind of utilities may also be added and helpfull to be used within and outside ngx-br?
+
 
 > MIT @ Neri Bez Fontana
