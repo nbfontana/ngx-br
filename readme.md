@@ -44,11 +44,6 @@ Install as a dependency:
 $ npm install --save @nbfontana/ngx-br
 ```
 
-If you prefer using Yarn::
-```
-$ yarn add @nbfontana/ngx-br
-```
-
 Then, you need to include NgxBrModule in your app:
 
 ```typescript
