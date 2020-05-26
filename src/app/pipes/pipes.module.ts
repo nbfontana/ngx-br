@@ -5,10 +5,11 @@ import {CpfCnpjPipe} from "./cpf-ou-cnpj.pipe";
 import {TelefonePipe} from "./telefone.pipe";
 import {CepPipe} from './cep.pipe';
 
+export * from './cpf.pipe';
 export * from './cnpj.pipe';
 export * from './cpf-ou-cnpj.pipe';
-export * from './cpf.pipe';
 export * from './telefone.pipe';
+export * from './cep.pipe';
 
 @NgModule({
   imports: [],
