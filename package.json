@@ -17,12 +17,16 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
+    "tslib": "^1.10.0"
+  },
+  "peerDependencies": {
     "cpf_cnpj": "0.2.0",
     "vanilla-masker": "1.2.0",
     "ngx-currency": "2.3.3",
     "rxjs-compat": "^6.0.0-rc.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "~0.901.7",
     "@angular/animations": "^9.1.9",
     "@angular/cli": "9.1.7",
     "@angular/common": "^9.1.9",
@@ -30,16 +34,15 @@
     "@angular/compiler-cli": "^9.1.9",
     "@angular/core": "^9.1.9",
     "@angular/forms": "^9.1.9",
-    "@angular/http": "^7.2.16",
     "@angular/language-service": "^9.1.9",
     "@angular/platform-browser": "^9.1.9",
     "@angular/platform-browser-dynamic": "^9.1.9",
     "@angular/router": "^9.1.9",
     "@types/jasmine": "~3.5.10",
     "@types/jasminewd2": "~2.0.2",
-    "@types/node": "^14.0.5",
+    "@types/node": "^12.12.42",
     "codecov": "^3.0.0",
-    "codelyzer": "^5.2.2",
+    "codelyzer": "^5.1.2",
     "core-js": "^3.6.5",
     "cz-conventional-changelog": "^3.2.0",
     "ghooks": "^2.0.2",
@@ -50,15 +53,15 @@
     "karma-coverage-istanbul-reporter": "^3.0.2",
     "karma-jasmine": "~3.2.0",
     "karma-jasmine-html-reporter": "^1.5.4",
-    "ng-packagr": "^9.1.5",
+    "ng-packagr": "^9.0.0",
     "protractor": "~7.0.0",
     "rxjs": "^6.5.5",
     "semantic-release": "^17.0.8",
     "travis-deploy-once": "^5.0.11",
     "ts-node": "~8.10.1",
     "tslint": "~6.1.2",
-    "typescript": "^3.6.5",
-    "zone.js": "^0.10.3"
+    "typescript": "^3.8.3",
+    "zone.js": "~0.10.2"
   },
   "repository": {
     "type": "git",
