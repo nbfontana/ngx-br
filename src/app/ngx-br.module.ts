@@ -18,7 +18,7 @@ export * from './commons/value-acessor-base';
   ]
 })
 export class NgxBrModule {
-  static forRoot(): ModuleWithProviders {
+  static forRoot(): ModuleWithProviders<NgxBrModule> {
     return {
       ngModule: NgxBrModule,
       providers: []
