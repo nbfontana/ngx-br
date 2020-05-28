@@ -1,6 +1,6 @@
 {
   "name": "@nbfontana/ngx-br",
-  "version": "1.0.0-rc.4",
+  "version": "1.0.0-rc.4.0.1",
   "license": "MIT",
   "description": "Brazilian components module for Angular",
   "author": "Neri Bez Fontana <nerifontana@gmail.com>",
@@ -86,5 +86,9 @@
     "ghooks": {
       "pre-commit": "npm run lint && npm run test"
     }
-  }
+  },
+  "files": [
+    "license",
+    "readme.md"
+  ]
 }
