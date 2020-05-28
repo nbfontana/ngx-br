@@ -1,8 +1,9 @@
 import { ControlValueAccessor } from '@angular/forms';
-import { Input } from '@angular/core';
+import { Input, Directive } from '@angular/core';
 
 const vanillaMasker = require('vanilla-masker');
 
+@Directive()
 export abstract class ValueAccessorBase<T> implements ControlValueAccessor {
 
   @Input()
